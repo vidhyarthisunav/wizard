@@ -1,0 +1,624 @@
+<html>
+<head>
+    <title>Form</title>
+    <link rel="stylesheet" href="./lastpage.css">
+    <link rel="stylesheet" href="./style.css">
+    
+</head>
+<body>
+        
+<div id="svg_wrap" style="display: none"></div>
+
+<section>
+  <div class="wizard-body">
+    <div class="content how-many-dogs-step">
+      <progress max="100" value="7"></progress>
+      <header>
+        <div class="paws-container paws-container--left"></div>
+        <div>
+          <h1 style="opacity: 1; transform: translate(0%, 0%);">First, what's your dog's 
+            <span class="white-tape">name?</span>
+          </h1>
+        </div>
+        <div class="paws-container paws-container--right"></div>
+      </header>
+      <div class="question-inner-wrapper" id="how-many-dogs-step">
+        <div class="question-inner" style="transform: translate(0%, 0%); opacity: 1;">
+          <div class="question">
+            <div class="card question__item">
+              <label for="dog-name-input-0" id="dog-name-label-0">My dog is called</label>
+              <input type="text" id="dog-name-input-0" aria-labelledby="dog-name-label-0" placeholder="Your dog&#39;s name">
+            </div>
+            <!--<div class="add-dog-button">
+              <button type="button" class="btn-updated btn--text" title="">
+                <span>I have another dog</span>
+              </button>
+            </div>-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="content boys-or-girls-step">
+    <progress max="100" value="17"></progress>
+    <header>
+      <div>
+        <h1 style="opacity: 1; transform: translate(0%, 0%);">
+          <span>Is <span class="nameofpet"></span> a </span>
+          <span class="white-tape">boy</span>
+          <span> or a </span>
+          <span class="white-tape">girl?</span>
+        </h1>
+      </div>
+    </header>
+    <div class="question-inner-wrapper">
+      <div class="question-inner" style="transform: translate(0%, 0%); opacity: 1;">
+        <div class="question">
+          <div class="">
+            <div class="sub-question">
+              <div class="question-divider">
+                <span><span class="nameofpet"></span> is a good...</span>
+              </div>
+              <div class="btn--group">
+                <button class="btn btn--pill" role="button" type="radio" id="girlbutton">
+                  <span>Girl</span>
+                </button>
+                <button class="btn btn--pill" role="button" type="radio" id="boybutton">
+                  <span>Boy</span>
+                </button>
+              </div>
+            </div>
+            <div class="sub-question" id="spayed" style="display:none;">
+              <p>and is <span class="genderofpet"></span> spayed?</p>
+                <div class="btn--group">
+                <button class="btn btn--pill" role="button" type="button" id="yesbutton">
+                  <span>Yes</span>
+                </button>
+                <button class="btn btn--pill" role="button" type="button" id="nobutton">
+                  <span>No</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wizard-body">
+      <div class="content how-old-step">
+        <progress max="100" value="24"></progress>
+        <header>
+          <div class="paws-container paws-container--left"></div>
+          <div>
+            <h1 style="opacity: 1; transform: translate(0%, 0%);">
+              <span class="white-tape">How old</span><span class=""> is <span class="nameofpet"></span>?</span>
+            </h1>
+          </div>
+          <div class="paws-container paws-container--right"></div>
+        </header>
+        <div class="question-inner-wrapper" id="how-old-step">
+          <div class="question-inner" style="transform: translate(0%, 0%); opacity: 1;">
+            <div class="question">
+              <div class="sub-question">
+                <div class="question-divider">
+                  <span><span class="nameofpet"></span> is...</span>
+                </div>
+                <div class="age-input-container">
+                  <div class="btn--group">
+                    <button class="btn btn--pill  adult" role="button" type="button" id="adultbutton">
+                      <span>An adult</span>
+                    </button>
+                    <button class="btn btn--pill" role="button" type="button" id="puppybutton">
+                      <span>A puppy</span>
+                    </button>
+                    </div>
+                    <div class="age-inputs">
+                      <input type="number" class="age-input" id="dog-age-months-input-0" aria-labelledby="dog-age-months-label-0" placeholder="0">
+                      <label for="dog-age-months-input-0" id="months">months</label>
+                      <input type="number" class="age-input" id="dog-age-weeks-input-0" aria-labelledby="dog-age-weeks-label-0" placeholder="0">
+                      <label for="dog-age-weeks-input-0" id="weeks">weeks</label>
+                    </div>
+                  </div>
+                  <div class="puppy-brought-home-wrapper">
+                    <input type="checkbox" class="puppy-brought-home-input" id="puppy-brought-home-input-0" aria-labelledby="puppy-brought-home-label-0" role="button">
+                    <label for="puppy-brought-home-input-0" class="checkbox-label">I haven't brought <span class="possesive"></span> home yet. Soon, very soon.</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</section>
+  
+  <section>
+    <div class="wizard-body">
+      <div class="content what-breed-step">
+        <progress max="100" value="31"></progress>
+        <header>
+          <div class="paws-container paws-container--left"></div>
+          <div>
+            <h1 style="opacity: 1; transform: translate(0%, 0%);">
+              <span class="">What </span><span class="white-tape">breed</span>
+              <span> is <span class="nameofpet"></span>?</span>
+            </h1>
+          </div>
+          <div class="paws-container paws-container--right"></div>
+        </header>
+        <div class="question-inner-wrapper" id="what-breed-step">
+          <div class="question-inner" style="transform: translate(0%, 0%); opacity: 1;">
+            <div class="question"><div class="sub-question"><p class="question-divider">
+              <span><span class="nameofpet"></span> is a...</span></p><div role="combobox" aria-owns="typeahead-list-box0" aria-haspopup="listbox" aria-expanded="false" id="breed-typeahead-0" class="typeahead-combobox"><input type="text" class="typeahead-input" aria-label="Search for your dog&#39;s breed" aria-controls="typeahead-listbox" aria-autocomplete="typeahead-list-box0" placeholder="Breed"><div class="typeahead-selector-wrapper"></div></div>
+              <div class="checkbox-wrapper">
+                
+                <input type="checkbox" class="" id="unknown-breed-input-0" aria-labelledby="unknown-breed-label-0" role="button">
+                <label for="unknown-breed-input-0" class="checkbox-label">I don't know <span class="possesive"></span> breed</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wizard-body">
+      <div class="content what-current-foods-step">
+        <progress max="100" value="38"></progress>
+        <header>
+          <div class="paws-container paws-container--left"></div>
+          <div>
+            <h1 style="opacity: 1; transform: translate(0%, 0%);">
+              <span class="">What is <span class="nameofpet"></span></span>
+              <span class="white-tape">currently eating?</span>
+            </h1>
+            <p style="transform: translate(0%, 0%); opacity: 1;">Choose as many as you feed.</p>
+          </div>
+          <div class="paws-container paws-container--right"></div>
+        </header>
+        <div class="question-inner-wrapper" id="what-current-foods-step">
+          <div class="question-inner" style="transform: translate(0%, 0%); opacity: 1;">
+            <div class="question">
+              <div class="sub-question">
+                <div class="question-divider">
+                  <span><span class="nameofpet"></span> eats...</span>
+                </div>
+                <div class="btn--group">
+                  <button class="btn btn--pill btn--multi " role="button" type="button" id="drybutton"><span>Dry</span></button>
+                  <button class="btn btn--pill btn--multi " role="button" type="button" id="wetbutton"><span>Wet</span></button>
+                  <button class="btn btn--pill btn--multi " role="button" type="button" id="rawbutton"><span>Raw</span></button>
+                  <button class="btn btn--pill btn--multi " role="button" type="button" id="homebutton"><span>Home-cooked</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wizard-body">
+      <div class="content what-kind-of-eater-step">
+        <progress max="100" value="45"></progress>
+        <header>
+          <div class="paws-container paws-container--left"></div>
+          <div>
+            <h1 style="opacity: 1; transform: translate(0%, 0%);">
+              <span class="">Is </span>
+              <span class=""><span class="nameofpet"></span> a </span>
+              <span class="white-tape">fussy eater?</span>
+            </h1>
+            <p style="opacity: 1; transform: translate(0%, 0%);">We're sure <span class="genderofpet"></span> will love Mom&Paw at first bite, but we always like to check a dog's eating habits just in case.</p>
+          </div>
+          <div class="paws-container paws-container--right"></div>
+        </header>
+        <div class="question-inner-wrapper" id="what-kind-of-eater-step">
+          <div class="question-inner" style="transform: translate(0%, 0%); opacity: 1;">
+            <div class="question"><div class="sub-question">
+              <div class="question-divider">
+                <span><span class="nameofpet"></span> is...</span>
+              </div>
+              <div class="btn--group">
+                <button class="btn btn--pill " role="button" type="button" id="veryfussybutton">
+                  <span>Very fussy</span>
+                </button>
+                <button class="btn btn--pill " role="button" type="button" id="fussybutton">
+                  <span>Fussy</span>
+                </button>
+                <button class="btn btn--pill " role="button" type="button" id="notfussybutton">
+                  <span>Not fussy</span>
+                </button>
+                <button class="btn btn--pill " role="button" type="button" id="foodiebutton">
+                  <span>A foodie</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wizard-body">
+      <div class="content what-body-condition-step">
+        <progress max="100" value="52"></progress>
+        <header>
+          <div class="paws-container paws-container--left"></div>
+          <div>
+            <h1 style="opacity: 1; transform: translate(0%, 0%);">
+              <span class="">What does <span class="nameofpet"></span>'s </span>
+              <span class="white-tape">body</span><span class=""> look like?</span>
+            </h1>
+            <p style="opacity: 1; transform: translate(0%, 0%);">So we can send <span class="possesive"></span> the right amount of food.</p>
+          </div>
+          <div class="paws-container paws-container--right"></div>
+        </header>
+        <div class="question-inner-wrapper" id="what-body-condition-step">
+          <div class="question-inner" style="transform: translate(0%, 0%); opacity: 1;">
+            <div class="question">
+              <div class="sub-question">
+                <div class="question-divider">
+                  <span><span class="nameofpet">
+                  </span> is...</span>
+                </div>
+                <div class="body-type">
+                  <div class="body-type__example-row">
+                    <div role="button" tabindex="0" class="body-type__example-row__item btn btn--radio" id="skinny">
+                      <img class="default-image" alt="a skinny dog" src="./images/skinny.svg">
+                      <img class="selected-image" alt="a skinny dog" src="./images/skinny-selected.svg">
+                    </div>
+                    <div role="button" tabindex="0" class="body-type__example-row__item btn btn--radio body-type__example-row__item--selected btn--radio--selected" id="ideal">
+                      <img class="default-image" alt="a dog whose weight is ideal" src="./images/just-right.svg">
+                      <img class="selected-image" alt="a dog whose weight is ideal" src="./images/just-right-selected.svg">
+                    </div>
+                    <div role="button" tabindex="0" class="body-type__example-row__item btn btn--radio " id="chubby">
+                      <img class="default-image" alt="a chubby dog" src="./images/chubby.svg">
+                      <img class="selected-image" alt="a chubby dog" src="./images/chubby-selected.svg">
+                    </div>
+                  </div>
+                </div>
+                <div class="body-type__description body-type__description--second" id="bodyframe">
+                  <p id="bodyheadline">Just Right</p><p id="bodycontent">Visible waistline with some fat cover but his ribs are easy to feel.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wizard-body">
+      <div class="content what-mass-step">
+        <progress max="100" value="59"></progress>
+        <header>
+          <div class="paws-container paws-container--left"></div>
+          <div>
+            <h1 style="opacity: 1; transform: translate(0%, 0%);">
+              <span class="">How much does <span class="nameofpet"></span> </span>
+              <span class="white-tape">currently weigh?</span>
+            </h1>
+          </div>
+          <div class="paws-container paws-container--right"></div>
+        </header>
+        <div class="question-inner-wrapper" id="what-mass-step">
+          <div class="question-inner" style="transform: translate(0%, 0%); opacity: 1;">
+            <div class="question">
+              <div class="sub-question">
+                <div class="question-divider">
+                  <span><span class="nameofpet"></span> weighs about...</span>
+                </div>
+                <div class="weight-input">
+                  <div class="range-slider__output">
+                    <div class="range-slider__output__wrapper">
+                      <input type="number" placeholder="00" aria-label="Enter your dog&#39;s weight" id="weight">
+                      <p>kg</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+      <div class="wizard-body"><div class="content what-activity-level-step">
+        <progress max="100" value="66"></progress>
+        <header>
+          <div class="paws-container paws-container--left"></div>
+          <div>
+            <h1 style="opacity: 1; transform: translate(0%, 0%);">
+              <span class="">How </span><span class="white-tape">active</span>
+              <span> is <span class="nameofpet"></span>?</span>
+            </h1>
+            <p style="transform: translate(0%, 0%); opacity: 1;">Whether they're a bundle of energy or a serial snoozer, every dog is unique and needs a different amount of food.</p>
+          </div>
+          <div class="paws-container paws-container--right"></div>
+        </header>
+        <div class="question-inner-wrapper" id="what-activity-level-step">
+          <div class="question-inner" style="transform: translate(0%, 0%); opacity: 1;">
+            <div class="question">
+              <div class="sub-question">
+                <div class="question-divider">
+                  <span><span class="nameofpet"></span> is...</span>
+                </div>
+                <div class="activity-level">
+                  <div class="activity-level__example-row">
+                    <div role="button" tabindex="0" class="activity-level__example-row__item btn btn--radio activity-level__example-row__item--selected btn--radio--selected" id="two">
+                      <img class="default-image" alt="a walking dog" src="./images/fairly-active.svg">
+                      <img class="selected-image" alt="a walking dog" src="./images/fairly-active-selected.svg">
+                    </div>
+                    <div role="button" tabindex="0" class="activity-level__example-row__item btn btn--radio " id="four">
+                      <img class="default-image" alt="a running dog" src="./images/adult-bundle-of-energy.svg">
+                      <img class="selected-image" alt="a running dog" src="./images/adult-bundle-of-energy-selected.svg">
+                    </div>
+                  </div>
+                  <div class="activity-level__description activity-level__description--second" id="activebody">
+                    <p id="activehead">Somewhat active</p>
+                    <p id="activecontent">0.5 - 1hr walks per day</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wizard-body">
+      <div class="content any-allergies-step">
+        <progress max="100" value="74"></progress>
+        <header>
+          <div class="paws-container paws-container--left"></div>
+          <div>
+            <h1 style="opacity: 1; transform: translate(0%, 0%);">
+              <span class="">Does <span class="nameofpet"></span> have any </span>
+              <span class="white-tape">allergies?</span>
+            </h1>
+            <p style="opacity: 1; transform: translate(0%, 0%);">Even though our meals are hypoallergenic with no added grain, soya, sugar or salt, we like to make sure all of our recipes are right for your pooch.</p>
+          </div>
+          <div class="paws-container paws-container--right"></div>
+        </header>
+        <div class="question-inner-wrapper" id="any-allergies-step">
+          <div class="question-inner" style="transform: translate(0%, 0%); opacity: 1;">
+            <div class="question">
+              <div class="sub-question"><div class="question-divider">
+                <span><span class="nameofpet"></span> is allergic to...</span>
+              </div>
+              <div class="btn--group">
+                <button class="btn btn--pill btn--pill--selected" type="button" id="nothing">
+                  <span>Nothing</span>
+                </button>
+                <button class="btn btn--pill btn--multi " role="button" type="button" id="chicken">
+                  <span>Chicken</span>
+                </button>
+                <button class="btn btn--pill btn--multi " role="button" type="button" id="cheese">
+                  <span>Cottage Cheese</span>
+                </button>
+              </div>
+              <div>
+                <div class="checkbox-wrapper">
+                  <input type="checkbox" aria-labelledby="unknown-allergies-label-0" role="button" id="unknown-allergies-input-0">
+                  <label class="checkbox-label">I'm not sure yet</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wizard-body">
+      <div class="content any-health-issues-step">
+        <progress max="100" value="85"></progress>
+        <header>
+          <div class="paws-container paws-container--left"></div>
+          <div>
+            <h1 style="opacity: 1; transform: translate(0%, 0%);">
+              <span class="">Does <span class="nameofpet"></span> have any </span>
+              <span class="white-tape">health issues?</span>
+            </h1>
+            <p style="opacity: 1; transform: translate(0%, 0%);">While our meals are perfect for a range of conditions, there are some we can't yet cater for.</p>
+          </div>
+          <div class="paws-container paws-container--right"></div>
+        </header>
+        <div class="question-inner-wrapper" id="any-health-issues-step">
+          <div class="question-inner" style="transform: translate(0%, 0%); opacity: 1;">
+            <div class="question">
+              <div class="sub-question">
+                <div class="question-divider">
+                  <span><span class="nameofpet"></span> has...</span>
+                </div>
+                <div class="health-issues">
+                  <div class="btn--group">
+                    <button class="btn btn--pill" role="button" type="button" id="nohealthbutton">
+                      <span>No health issues</span>
+                    </button>
+                    <button class="btn btn--pill " role="button" type="button" id="somehealthbutton">
+                      <span>Some health issues</span>
+                    </button>
+                    <div role="combobox" aria-owns="typeahead-list-box0" aria-haspopup="listbox" aria-expanded="false" class="typeahead-combobox" style="display:none;" id="healthissuesfield">
+                      <input type="text" class="typeahead-input" aria-controls="typeahead-list-box0" aria-autocomplete="typeahead-listbox" aria-label="Search for your dog&#39;s health issues" placeholder="health issues">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wizard-body">
+      <div class="content what-snacking-habits-step">
+        <progress max="100" value="92"></progress>
+        <header>
+          <div class="paws-container paws-container--left"></div>
+          <div>
+            <h1 style="opacity: 1; transform: translate(0%, 0%);">
+              <span class="">Does <span class="nameofpet"></span> get any </span>
+              <span class="white-tape">treats</span>
+              <span> or </span>
+              <span class="white-tape">snacks?</span>
+            </h1>
+          </div>
+          <div class="paws-container paws-container--right"></div>
+        </header>
+        <div class="question-inner-wrapper" id="what-snacking-habits-step">
+          <div class="question-inner" style="transform: translate(0%, 0%); opacity: 1;">
+            <div class="question">
+              <div class="sub-question">
+                <div class="question-divider">
+                  <span><span class="nameofpet"></span>...</span>
+                </div>
+                <div class="snacks">
+                  <div class="snacks__example-row">
+                    <div role="button" tabindex="0" class="snacks__example-row__item btn btn--radio " id="none">
+                      <img class="default-image" alt="an outline of a dog treat" src="./images/no-treats.svg">
+                      <img class="selected-image" alt="an outline of a dog treat" src="./images/no-treats-selected.svg">
+                    </div>
+                    <div role="button" tabindex="0" class="snacks__example-row__item btn btn--radio snacks__example-row__item--selected btn--radio--selected" id="some">
+                      <img class="default-image" alt="a few dog treats" src="./images/some-treats.svg">
+                      <img class="selected-image" alt="a few dog treats" src="./images/some-treats-selected.svg">
+                    </div>
+                    <div role="button" tabindex="0" class="snacks__example-row__item btn btn--radio " id="many">
+                      <img class="default-image" alt="a big bunch of dog treats" src="./images/lots-of-treats.svg">
+                      <img class="selected-image" alt="a big bunch of dog treats" src="./images/lots-of-treats-selected.svg">
+                    </div>
+                  </div>
+                  <div class="snacks__description snacks__description--second" id="partyframe">
+                    <p id="partyhead">Has some</p>
+                    <p id="partycontent">1-3 times a day</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+     <div class="wizard-body">
+       <div class="content lead-capture-step">
+         <progress max="100" value="100"></progress>
+         <header>
+           <div class="paws-container paws-container--left"></div>
+           <div>
+             <h1 style="opacity: 1; transform: translate(0%, 0%);">Pup parent details</h1>
+            </div>
+            <div class="paws-container paws-container--right"></div>
+          </header>
+          <div class="question-inner-wrapper" id="lead-capture-step">
+            <div class="question-inner" style="transform: translate(0%, 0%); opacity: 1;">
+              <div class="question lead-capture"><div class="lead-capture__name-group">
+                <label for="pet-parent-full-name" id="pet-parent-name-label">Your name</label>
+                <input type="text" placeholder="e.g. Mia McDoglover" id="pet-parent-full-name" aria-labelledby="pet-parent-name-label" aria-invalid="false" name="full_name" required="">
+              </div>
+              <div class="lead-capture__email-group">
+                <label for="pet-parent-email" id="pet-parent-email-label">Your email</label>
+                <input type="email" name="email" id="pet-parent-email" aria-labelledby="pet-parent-email-label" aria-invalid="false" placeholder="e.g. mia.mcdoglover@gmail.com" required="">
+              </div>
+              <div class="lead-capture__email-group">
+                <label for="pet-parent-email" id="pet-parent-email-label">Your phone number</label>
+                <input type="phone" name="phone" id="pet-parent-phone" aria-labelledby="pet-parent-email-label" aria-invalid="false" placeholder="e.g. (+91) mcdog lover" required="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section>
+    <div class="main-content scrollable-body-panel">
+      <div id="plan-wrapper" class="plan-wrapper recipes">
+        <div id="plan-application">
+          <!--<nav class="my-plan__nav">
+            <div class="my-plan__nav__inner">
+              <a class="my-plan__nav__button btn-updated btn-updated--secondary" href="https://butternutbox.com/my_plan/recipes">
+                <svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(180deg);">
+                  <path d="M2.493.907c2.248.982 4.42 2.106 6.423 3.54.659.466 1.434.789 2.184 1.086 1.085.427 1.357 1.254.44 1.977-1.552 1.215-3.219 2.288-4.847 3.4-1.008.684-2.068 1.304-3.102 1.964-.672.426-1.02.232-1.06-.57-.025-.594.117-1.098.698-1.408.815-.44 1.629-.878 2.404-1.383a64.122 64.122 0 002.882-2.028c.4-.298.336-.57-.013-.944-1.641-1.77-3.773-2.83-5.79-4.058-.62-.375-.762-.904-.478-1.576h.259z" fill="#1e5d84">
+                  </path>
+                </svg>
+                <span>Back</span>
+              </a>
+              <a class="my-plan__nav__button btn-updated btn-updated--blue " href="https://butternutbox.com/my_plan/plan">
+                <span>Choose Plan</span>
+                <svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(0deg);">
+                  <path d="M2.493.907c2.248.982 4.42 2.106 6.423 3.54.659.466 1.434.789 2.184 1.086 1.085.427 1.357 1.254.44 1.977-1.552 1.215-3.219 2.288-4.847 3.4-1.008.684-2.068 1.304-3.102 1.964-.672.426-1.02.232-1.06-.57-.025-.594.117-1.098.698-1.408.815-.44 1.629-.878 2.404-1.383a64.122 64.122 0 002.882-2.028c.4-.298.336-.57-.013-.944-1.641-1.77-3.773-2.83-5.79-4.058-.62-.375-.762-.904-.478-1.576h.259z" fill="#fff"></path>
+                </svg>
+              </a>
+            </div>
+          </nav>-->
+          <main>
+              <header class="step-header">
+                <div class="step-header__wrapper">
+                  <p class="step-header__step"></p>
+                  <!--<h1 class="step-header__title">
+                    <span>First, choose his recipes</span>
+                  </h1>-->
+                </div>
+              </header>
+             <!-- <div class="dog-summaries">
+                <div class="dog-summary">
+                  <span class="dog-summary__title">jk</span>
+                  <hr>
+                  <p class="dog-summary__content">We feed over 10,000 puppies, so jk is in good company.</p>
+                </div>
+              </div>-->
+              <div class="calorie-specification">
+                <span class="calorie-specification__background-paw"></span>
+                <span class="calorie-specification__background-paw"></span>
+                <span class="calorie-specification__background-paw"></span>
+                <span class="calorie-specification__background-paw"></span>
+                <p class="calorie-specification__explanation">Based on what you've told us, here is his recommended daily calorie intake from a balanced diet:</p>
+                <span class="calorie-specification__per-dog"><span class="nameofpet"></span> needs<span class="calorie-specification__per-dog__daily-calories"> <span id="calorie"></span> kcal</span>/day</span>
+              </div>
+          </main>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+<div class="question-navigation-buttons">
+
+  <button role="button" type="button" class="btn btn-updated btn-updated--secondary button" id="prev" style="display: none;">
+    <img src="./images/footer.svg" class="icon--left" alt="an arrow pointing to the left">
+    <span>Back</span>
+  </button>
+
+  <button role="button" type="button" class="btn btn-updated btn-updated--blue button" id="next" onclick="setName()">
+    <span id="buttontitle">Let's Start</span>
+    <img src="./images/footer.svg" class="icon--right" alt="an arrow pointing to the right">
+  </button>
+
+</div>
+
+</body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="./main.js"></script>
+  <script src="./features.js"></script>
+  <script src="./googlesheet.js"></script>
+
+</html>

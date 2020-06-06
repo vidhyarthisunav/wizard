@@ -13,11 +13,11 @@
   <div class="wizard-body">
     <div class="content how-many-dogs-step">
       <progress max="100" value="7"></progress>
-      <header>
+      <header class="thistime">
         <div class="paws-container paws-container--left"></div>
         <div>
-          <h1 style="opacity: 1; transform: translate(0%, 0%);">First, what's your dog's 
-            <span class="white-tape">name?</span>
+          <h1 style="opacity: 1; transform: translate(0%, 0%); color:whitesmoke;">First, what's your dog's 
+            <span >name?</span>
           </h1>
         </div>
         <div class="paws-container paws-container--right"></div>
@@ -26,14 +26,14 @@
         <div class="question-inner" style="transform: translate(0%, 0%); opacity: 1;">
           <div class="question">
             <div class="card question__item">
-              <label for="dog-name-input-0" id="dog-name-label-0">My dog is called</label>
+              <label for="dog-name-input-0" id="dog-name-label-00">My dog is called</label>
               <input type="text" id="dog-name-input-0" aria-labelledby="dog-name-label-0" placeholder="Your dog&#39;s name">
             </div>
-            <!--<div class="add-dog-button">
+            <div class="add-dog-button">
               <button type="button" class="btn-updated btn--text" title="">
-                <span>I have another dog</span>
+                <span class="moredogs">I have another dog</span>
               </button>
-            </div>-->
+            </div>
           </div>
         </div>
       </div>
@@ -48,9 +48,9 @@
       <div>
         <h1 style="opacity: 1; transform: translate(0%, 0%);">
           <span>Is <span class="nameofpet"></span> a </span>
-          <span class="white-tape">boy</span>
+          <span >boy</span>
           <span> or a </span>
-          <span class="white-tape">girl?</span>
+          <span >girl?</span>
         </h1>
       </div>
     </header>
@@ -72,7 +72,7 @@
               </div>
             </div>
             <div class="sub-question" id="spayed" style="display:none;">
-              <p>and is <span class="genderofpet"></span> spayed?</p>
+              <p>and is <span class="genderofpet"></span> <span id="spaneu">spayed</span>?</p>
                 <div class="btn--group">
                 <button class="btn btn--pill" role="button" type="button" id="yesbutton">
                   <span>Yes</span>
@@ -83,6 +83,7 @@
               </div>
             </div>
           </div>
+          <div class="add1"></div>
         </div>
       </div>
     </div>
@@ -97,7 +98,7 @@
           <div class="paws-container paws-container--left"></div>
           <div>
             <h1 style="opacity: 1; transform: translate(0%, 0%);">
-              <span class="white-tape">How old</span><span class=""> is <span class="nameofpet"></span>?</span>
+              <span >How old</span><span class=""> is <span class="nameofpet"></span>?</span>
             </h1>
           </div>
           <div class="paws-container paws-container--right"></div>
@@ -132,6 +133,7 @@
                 </div>
               </div>
             </div>
+            <div class="add2"></div>
           </div>
         </div>
       </div>
@@ -145,7 +147,7 @@
           <div class="paws-container paws-container--left"></div>
           <div>
             <h1 style="opacity: 1; transform: translate(0%, 0%);">
-              <span class="">What </span><span class="white-tape">breed</span>
+              <span class="">What </span><span >breed</span>
               <span> is <span class="nameofpet"></span>?</span>
             </h1>
           </div>
@@ -157,8 +159,8 @@
               <span><span class="nameofpet"></span> is a...</span></p><div role="combobox" aria-owns="typeahead-list-box0" aria-haspopup="listbox" aria-expanded="false" id="breed-typeahead-0" class="typeahead-combobox"><input type="text" class="typeahead-input" aria-label="Search for your dog&#39;s breed" aria-controls="typeahead-listbox" aria-autocomplete="typeahead-list-box0" placeholder="Breed"><div class="typeahead-selector-wrapper"></div></div>
               <div class="checkbox-wrapper">
                 
-                <input type="checkbox" class="" id="unknown-breed-input-0" aria-labelledby="unknown-breed-label-0" role="button">
-                <label for="unknown-breed-input-0" class="checkbox-label">I don't know <span class="possesive"></span> breed</label>
+                <input type="checkbox" class="check" id="unknown-breed-input-0" aria-labelledby="unknown-breed-label-0" role="button">
+                <label for="unknown-breed-input-0" class="checkbox-label ">I don't know <span class="possesive"></span> breed</label>
               </div>
             </div>
           </div>
@@ -176,7 +178,7 @@
           <div>
             <h1 style="opacity: 1; transform: translate(0%, 0%);">
               <span class="">What is <span class="nameofpet"></span></span>
-              <span class="white-tape">currently eating?</span>
+              <span >currently eating?</span>
             </h1>
             <p style="transform: translate(0%, 0%); opacity: 1;">Choose as many as you feed.</p>
           </div>
@@ -213,7 +215,7 @@
             <h1 style="opacity: 1; transform: translate(0%, 0%);">
               <span class="">Is </span>
               <span class=""><span class="nameofpet"></span> a </span>
-              <span class="white-tape">fussy eater?</span>
+              <span >fussy eater?</span>
             </h1>
             <p style="opacity: 1; transform: translate(0%, 0%);">We're sure <span class="genderofpet"></span> will love Mom&Paw at first bite, but we always like to check a dog's eating habits just in case.</p>
           </div>
@@ -255,7 +257,7 @@
           <div>
             <h1 style="opacity: 1; transform: translate(0%, 0%);">
               <span class="">What does <span class="nameofpet"></span>'s </span>
-              <span class="white-tape">body</span><span class=""> look like?</span>
+              <span >body</span><span class=""> look like?</span>
             </h1>
             <p style="opacity: 1; transform: translate(0%, 0%);">So we can send <span class="possesive"></span> the right amount of food.</p>
           </div>
@@ -305,7 +307,7 @@
           <div>
             <h1 style="opacity: 1; transform: translate(0%, 0%);">
               <span class="">How much does <span class="nameofpet"></span> </span>
-              <span class="white-tape">currently weigh?</span>
+              <span >currently weigh?</span>
             </h1>
           </div>
           <div class="paws-container paws-container--right"></div>
@@ -340,7 +342,7 @@
           <div class="paws-container paws-container--left"></div>
           <div>
             <h1 style="opacity: 1; transform: translate(0%, 0%);">
-              <span class="">How </span><span class="white-tape">active</span>
+              <span class="">How </span><span >active</span>
               <span> is <span class="nameofpet"></span>?</span>
             </h1>
             <p style="transform: translate(0%, 0%); opacity: 1;">Whether they're a bundle of energy or a serial snoozer, every dog is unique and needs a different amount of food.</p>
@@ -387,7 +389,7 @@
           <div>
             <h1 style="opacity: 1; transform: translate(0%, 0%);">
               <span class="">Does <span class="nameofpet"></span> have any </span>
-              <span class="white-tape">allergies?</span>
+              <span >allergies?</span>
             </h1>
             <p style="opacity: 1; transform: translate(0%, 0%);">Even though our meals are hypoallergenic with no added grain, soya, sugar or salt, we like to make sure all of our recipes are right for your pooch.</p>
           </div>
@@ -432,7 +434,7 @@
           <div>
             <h1 style="opacity: 1; transform: translate(0%, 0%);">
               <span class="">Does <span class="nameofpet"></span> have any </span>
-              <span class="white-tape">health issues?</span>
+              <span >health issues?</span>
             </h1>
             <p style="opacity: 1; transform: translate(0%, 0%);">While our meals are perfect for a range of conditions, there are some we can't yet cater for.</p>
           </div>
@@ -475,9 +477,9 @@
           <div>
             <h1 style="opacity: 1; transform: translate(0%, 0%);">
               <span class="">Does <span class="nameofpet"></span> get any </span>
-              <span class="white-tape">treats</span>
+              <span >treats</span>
               <span> or </span>
-              <span class="white-tape">snacks?</span>
+              <span >snacks?</span>
             </h1>
           </div>
           <div class="paws-container paws-container--right"></div>
@@ -552,50 +554,23 @@
   <section>
     <div class="main-content scrollable-body-panel">
       <div id="plan-wrapper" class="plan-wrapper recipes">
-        <div id="plan-application">
-          <!--<nav class="my-plan__nav">
-            <div class="my-plan__nav__inner">
-              <a class="my-plan__nav__button btn-updated btn-updated--secondary" href="https://butternutbox.com/my_plan/recipes">
-                <svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(180deg);">
-                  <path d="M2.493.907c2.248.982 4.42 2.106 6.423 3.54.659.466 1.434.789 2.184 1.086 1.085.427 1.357 1.254.44 1.977-1.552 1.215-3.219 2.288-4.847 3.4-1.008.684-2.068 1.304-3.102 1.964-.672.426-1.02.232-1.06-.57-.025-.594.117-1.098.698-1.408.815-.44 1.629-.878 2.404-1.383a64.122 64.122 0 002.882-2.028c.4-.298.336-.57-.013-.944-1.641-1.77-3.773-2.83-5.79-4.058-.62-.375-.762-.904-.478-1.576h.259z" fill="#1e5d84">
-                  </path>
-                </svg>
-                <span>Back</span>
-              </a>
-              <a class="my-plan__nav__button btn-updated btn-updated--blue " href="https://butternutbox.com/my_plan/plan">
-                <span>Choose Plan</span>
-                <svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(0deg);">
-                  <path d="M2.493.907c2.248.982 4.42 2.106 6.423 3.54.659.466 1.434.789 2.184 1.086 1.085.427 1.357 1.254.44 1.977-1.552 1.215-3.219 2.288-4.847 3.4-1.008.684-2.068 1.304-3.102 1.964-.672.426-1.02.232-1.06-.57-.025-.594.117-1.098.698-1.408.815-.44 1.629-.878 2.404-1.383a64.122 64.122 0 002.882-2.028c.4-.298.336-.57-.013-.944-1.641-1.77-3.773-2.83-5.79-4.058-.62-.375-.762-.904-.478-1.576h.259z" fill="#fff"></path>
-                </svg>
-              </a>
-            </div>
-          </nav>-->
-          <main>
-              <header class="step-header">
-                <div class="step-header__wrapper">
-                  <p class="step-header__step"></p>
-                  <!--<h1 class="step-header__title">
-                    <span>First, choose his recipes</span>
-                  </h1>-->
-                </div>
-              </header>
-             <!-- <div class="dog-summaries">
-                <div class="dog-summary">
-                  <span class="dog-summary__title">jk</span>
-                  <hr>
-                  <p class="dog-summary__content">We feed over 10,000 puppies, so jk is in good company.</p>
-                </div>
-              </div>-->
-              <div class="calorie-specification">
-                <span class="calorie-specification__background-paw"></span>
-                <span class="calorie-specification__background-paw"></span>
-                <span class="calorie-specification__background-paw"></span>
-                <span class="calorie-specification__background-paw"></span>
-                <p class="calorie-specification__explanation">Based on what you've told us, here is his recommended daily calorie intake from a balanced diet:</p>
-                <span class="calorie-specification__per-dog"><span class="nameofpet"></span> needs<span class="calorie-specification__per-dog__daily-calories"> <span id="calorie"></span> kcal</span>/day</span>
+        <main>
+          <div id="plan-application">
+            <header class="step-header">
+              <div class="step-header__wrapper">
+                <p class="step-header__step"></p>
               </div>
-          </main>
-        </div>
+            </header>
+            <div class="calorie-specification">
+              <span class="calorie-specification__background-paw"></span>
+              <span class="calorie-specification__background-paw"></span>
+              <span class="calorie-specification__background-paw"></span>
+              <span class="calorie-specification__background-paw"></span>
+              <p class="calorie-specification__explanation">Based on what you've told us, here is his recommended daily calorie intake from a balanced diet:</p>
+              <span class="calorie-specification__per-dog"><span class="nameofpet"></span> needs<span class="calorie-specification__per-dog__daily-calories"> <span id="calorie"></span> kcal</span>/day</span>
+            </div>
+          </div>
+        </main>
       </div>
     </div>
   </section>
@@ -608,7 +583,7 @@
     <span>Back</span>
   </button>
 
-  <button role="button" type="button" class="btn btn-updated btn-updated--blue button" id="next" onclick="setName()">
+  <button role="button" type="button" class="btn btn-updated btn-updated--blue button" style="background-color: rgb(65, 85, 132);"id="next" onclick="setName()">
     <span id="buttontitle">Let's Start</span>
     <img src="./images/footer.svg" class="icon--right" alt="an arrow pointing to the right">
   </button>
@@ -618,7 +593,86 @@
 </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="./main.js"></script>
-  <script src="./features.js"></script>
   <script src="./googlesheet.js"></script>
+  <script src="./features.js"></script>
+  <script src="./validate..js"></script>
 
+  <script>
+    var pageaddress = 0;
+    $(document).ready(function(){
+        $('#next').attr('disabled',true);
+        $('#dog-name-input-0').keyup(function(){
+            if($(this).val().length !=0)
+                $('#next').attr('disabled', false);            
+            else
+                $('#next').attr('disabled',true);
+        })
+    });
+    $(document).ready(function(){
+        $('#next').attr('disabled',true);
+        $('#dog-name-input-0').keyup(function(){
+            if($(this).val().length !=0)
+                $('#next').attr('disabled', false);            
+            else
+                $('#next').attr('disabled',true);
+        })
+    });
+    $(document).ready(function(){
+        $('#next').attr('disabled',true);
+        $('#weight').keyup(function(){
+            if($(this).val().length !=0)
+                $('#next').attr('disabled', false);            
+            else
+                $('#next').attr('disabled',true);
+        })
+    });
+    $(document).ready(function(){
+        $('#next').attr('disabled',true);
+        $('#pet-parent-email-label').keyup(function(){
+            if($(this).val().length !=0)
+                $('#next').attr('disabled', false);            
+            else
+                $('#next').attr('disabled',true);
+        })
+    });    
+    $('#next').click(function(){
+      pageaddress++;
+      if(pageaddress == 1 || pageaddress == 2 ||| pageaddress == 7){
+      
+        $('#next').attr('disabled', true); 
+      }
+    });
+    $('#prev').click(function(){
+      pageaddress--;
+      if(pageaddress == 0){
+      document.getElementById('buttontitle').innerHTML = "Let's Start";
+      }
+    });
+    var field = 0;
+    $('.moredogs').click(function(){
+      field = field + 1;
+      $('<div class="card question__item"><label for="dog-name-input-0" id="dog-name-label-0">My dog is called</label><input type="text" id="dog-name-input-0" aria-labelledby="dog-name-label-0" placeholder="Your dog&#39;s name"></div>').insertBefore('.add-dog-button');
+    
+      $('<div><div class="sub-question"><div class="question-divider"><span><span class="nameofpet"/> is a good...</span></div><div class="btn--group"><button class="btn btn--pill" role="button" type="radio" id="girlbutton"><span>Girl</span></button><button class="btn btn--pill" role="button" type="radio" id="boybutton"><span>Boy</span></button></div></div><div class="sub-question" id="spayed" style="display:none;"><p>and is <span class="genderofpet"/> spayed?</p><div class="btn--group"><button class="btn btn--pill" role="button" type="button" id="yesbutton"><span>Yes</span></button><button class="btn btn--pill" role="button" type="button" id="nobutton"><span>No</span></button></div></div></div>').insertBefore('.add1');
+      
+      $('<div class="question"> <div class="sub-question"> <div class="question-divider"> <span><span class="nameofpet"></span> is...</span> </div> <div class="age-input-container"> <div class="btn--group"> <button class="btn btn--pill adult" role="button" type="button" id="adultbutton"> <span>An adult</span> </button> <button class="btn btn--pill" role="button" type="button" id="puppybutton"> <span>A puppy</span> </button> </div> <div class="age-inputs"> <input type="number" class="age-input" id="dog-age-months-input-0" aria-labelledby="dog-age-months-label-0" placeholder="0"> <label for="dog-age-months-input-0" id="months">months</label> <input type="number" class="age-input" id="dog-age-weeks-input-0" aria-labelledby="dog-age-weeks-label-0" placeholder="0"> <label for="dog-age-weeks-input-0" id="weeks">weeks</label> </div> </div> <div class="puppy-brought-home-wrapper"> <input type="checkbox" class="puppy-brought-home-input" id="puppy-brought-home-input-0" aria-labelledby="puppy-brought-home-label-0" role="button"> <label for="puppy-brought-home-input-0" class="checkbox-label">I haven&#39;t brought <span class="possesive"></span> home yet. Soon, very soon.</label> </div> </div> </div> </div>').insertBefore('.add2');
+    })
+
+  </script>
+  <!--<script>
+    $('.btn--pill').click(function(){
+      if($(this).hasClass("btn--multi")){alert('hey');
+        if($(this).hasClass("btn--pill--selected btn--multi--selected")){
+          $(this).removeClass("btn--pill--selected btn--multi--selected");
+        }
+        else{
+          $(this).addClass("btn--pill--selected btn--multi--selected");
+        }
+      }
+      else{
+        $(this).siblings().removeClass("btn--pill--selected");
+        $(this).addClass("btn--pill--selected");
+      }
+    })
+  </script>-->
 </html>

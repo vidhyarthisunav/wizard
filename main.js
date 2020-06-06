@@ -86,7 +86,7 @@ $(".button").click(function () {
   var currentSection = $("section:nth-of-type(" + child + ")");
   currentSection.fadeIn();
   currentSection.css('transform','translateX(0)');
- currentSection.prevAll('section').css('transform','translateX(-100px)');
+  currentSection.prevAll('section').css('transform','translateX(-100px)');
   currentSection.nextAll('section').css('transform','translateX(100px)');
   $('section').not(currentSection).hide();
 });

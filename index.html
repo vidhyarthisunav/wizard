@@ -697,11 +697,11 @@
     
     var pageaddress = 0;
     $('#next').click(function(){
-      pageaddress++;
       
-      if(pageaddress == 14){
+      
+      if(pageaddress == 13){
         var petname = document.getElementById('dog-name-input-0').value;
-        var parentname = document.getElementById('pet-parent-name-label').value;
+        var parentname = document.getElementById('pet-parent-full-name').value;
         var weight = document.getElementById('weight').value;
         var calorie = document.getElementById('calorie').innerHTML;
         var url = encodeURI("Hi Mom and Paw team, Myself "+parentname+" and my pet's name is "+petname+". "+petname+"'s weight is "+weight+". According to your analysis, "+petname+" requires "+calorie+" calories on daily basis and I want to order <recipe name> fresh food for my pet. Please suggest how to go ahead.");
@@ -714,6 +714,7 @@
             alert('Please allow popups for this website.');
         }
       }
+      pageaddress++;
     })
     $(document).ready(function(){
         $('#next').attr('disabled',true);

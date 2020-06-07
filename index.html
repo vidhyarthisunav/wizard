@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="./lastpage.css">
     <link rel="stylesheet" href="./style.css">
     
+    
 </head>
 <body>
         
@@ -26,12 +27,12 @@
         <div class="question-inner" style="transform: translate(0%, 0%); opacity: 1;">
           <div class="question">
             <div class="card question__item">
-              <label for="dog-name-input-0" id="dog-name-label-00">My dog is called</label>
+              <label for="dog-name-input-0" id="dog-name-label-0">My dog is called</label>
               <input type="text" id="dog-name-input-0" aria-labelledby="dog-name-label-0" placeholder="Your dog&#39;s name">
             </div>
             <div class="add-dog-button">
-              <button type="button" class="btn-updated btn--text" title="">
-                <span class="moredogs">I have another dog</span>
+              <button id="moredogs" type="button" class="btn-updated btn--text" title="">
+                <span >I have another dog</span>
               </button>
             </div>
           </div>
@@ -115,7 +116,7 @@
                     <button class="btn btn--pill  adult" role="button" type="button" id="adultbutton">
                       <span>An adult</span>
                     </button>
-                    <button class="btn btn--pill" role="button" type="button" id="puppybutton">
+                    <button class="btn btn--pill" role="button" type="button" id=concat("puppybutton",1)>
                       <span>A puppy</span>
                     </button>
                     </div>
@@ -165,6 +166,7 @@
             </div>
           </div>
         </div>
+        <div id="addbreed"></div>
       </div>
     </div>
   </section>
@@ -192,12 +194,13 @@
                   <span><span class="nameofpet"></span> eats...</span>
                 </div>
                 <div class="btn--group">
-                  <button class="btn btn--pill btn--multi " role="button" type="button" id="drybutton"><span>Dry</span></button>
-                  <button class="btn btn--pill btn--multi " role="button" type="button" id="wetbutton"><span>Wet</span></button>
-                  <button class="btn btn--pill btn--multi " role="button" type="button" id="rawbutton"><span>Raw</span></button>
-                  <button class="btn btn--pill btn--multi " role="button" type="button" id="homebutton"><span>Home-cooked</span></button>
+                  <button class="btn btn--pill btn--multi" role="button" type="button"><span>Dry</span></button>
+                  <button class="btn btn--pill btn--multi" role="button" type="button"><span>Wet</span></button>
+                  <button class="btn btn--pill btn--multi" role="button" type="button"><span>Raw</span></button>
+                  <button class="btn btn--pill btn--multi" role="button" type="button"><span>Home-cooked</span></button>
                 </div>
               </div>
+              <div id="foodtype"></div>
             </div>
           </div>
         </div>
@@ -228,20 +231,21 @@
                 <span><span class="nameofpet"></span> is...</span>
               </div>
               <div class="btn--group">
-                <button class="btn btn--pill " role="button" type="button" id="veryfussybutton">
+                <button class="btn btn--pill " role="button" type="button">
                   <span>Very fussy</span>
                 </button>
-                <button class="btn btn--pill " role="button" type="button" id="fussybutton">
+                <button class="btn btn--pill " role="button" type="button">
                   <span>Fussy</span>
                 </button>
-                <button class="btn btn--pill " role="button" type="button" id="notfussybutton">
+                <button class="btn btn--pill " role="button" type="button">
                   <span>Not fussy</span>
                 </button>
-                <button class="btn btn--pill " role="button" type="button" id="foodiebutton">
+                <button class="btn btn--pill " role="button" type="button">
                   <span>A foodie</span>
                 </button>
               </div>
             </div>
+            <div id="addfussy"></div>
           </div>
         </div>
       </div>
@@ -271,26 +275,30 @@
                   <span><span class="nameofpet">
                   </span> is...</span>
                 </div>
-                <div class="body-type">
-                  <div class="body-type__example-row">
-                    <div role="button" tabindex="0" class="body-type__example-row__item btn btn--radio" id="skinny">
-                      <img class="default-image" alt="a skinny dog" src="./images/skinny.svg">
-                      <img class="selected-image" alt="a skinny dog" src="./images/skinny-selected.svg">
-                    </div>
-                    <div role="button" tabindex="0" class="body-type__example-row__item btn btn--radio body-type__example-row__item--selected btn--radio--selected" id="ideal">
-                      <img class="default-image" alt="a dog whose weight is ideal" src="./images/just-right.svg">
-                      <img class="selected-image" alt="a dog whose weight is ideal" src="./images/just-right-selected.svg">
-                    </div>
-                    <div role="button" tabindex="0" class="body-type__example-row__item btn btn--radio " id="chubby">
-                      <img class="default-image" alt="a chubby dog" src="./images/chubby.svg">
-                      <img class="selected-image" alt="a chubby dog" src="./images/chubby-selected.svg">
+                <div>
+                  <div class="body-type">
+                    <div class="body-type__example-row">
+                      <div role="button" tabindex="0" class="body-type__example-row__item btn btn--radio" id="skinny">
+                        <img class="default-image" alt="a skinny dog" src="./images/skinny.svg">
+                        <img class="selected-image" alt="a skinny dog" src="./images/skinny-selected.svg">
+                      </div>
+                      <div role="button" tabindex="0" class="body-type__example-row__item btn btn--radio body-type__example-row__item--selected btn--radio--selected" id="ideal">
+                        <img class="default-image" alt="a dog whose weight is ideal" src="./images/just-right.svg">
+                        <img class="selected-image" alt="a dog whose weight is ideal" src="./images/just-right-selected.svg">
+                      </div>
+                      <div role="button" tabindex="0" class="body-type__example-row__item btn btn--radio " id="chubby">
+                        <img class="default-image" alt="a chubby dog" src="./images/chubby.svg">
+                        <img class="selected-image" alt="a chubby dog" src="./images/chubby-selected.svg">
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="body-type__description body-type__description--second" id="bodyframe">
-                  <p id="bodyheadline">Just Right</p><p id="bodycontent">Visible waistline with some fat cover but his ribs are easy to feel.</p>
+                  <div class="body-type__description body-type__description--second">
+                    <p>Just Right</p>
+                    <p>Visible waistline with some fat cover but his ribs are easy to feel.</p>
+                  </div>
                 </div>
               </div>
+              <div id="body"></div>
             </div>
           </div>
         </div>
@@ -328,6 +336,7 @@
                   </div>
                 </div>
               </div>
+              <div id="addweight"></div>
             </div>
           </div>
         </div>
@@ -358,11 +367,11 @@
                 </div>
                 <div class="activity-level">
                   <div class="activity-level__example-row">
-                    <div role="button" tabindex="0" class="activity-level__example-row__item btn btn--radio activity-level__example-row__item--selected btn--radio--selected" id="two">
+                    <div role="button" tabindex="0" class="activity-level__example-row__item btn btn--radio activity-level__example-row__item--selected btn--radio--selected">
                       <img class="default-image" alt="a walking dog" src="./images/fairly-active.svg">
                       <img class="selected-image" alt="a walking dog" src="./images/fairly-active-selected.svg">
                     </div>
-                    <div role="button" tabindex="0" class="activity-level__example-row__item btn btn--radio " id="four">
+                    <div role="button" tabindex="0" class="activity-level__example-row__item btn btn--radio" id="highactive">
                       <img class="default-image" alt="a running dog" src="./images/adult-bundle-of-energy.svg">
                       <img class="selected-image" alt="a running dog" src="./images/adult-bundle-of-energy-selected.svg">
                     </div>
@@ -373,6 +382,7 @@
                   </div>
                 </div>
               </div>
+              <div id="addactivity"></div>
             </div>
           </div>
         </div>
@@ -419,6 +429,7 @@
                 </div>
               </div>
             </div>
+            <div id="addallergy"></div>
           </div>
         </div>
       </div>
@@ -461,6 +472,7 @@
                   </div>
                 </div>
               </div>
+              <div id="addissues"></div>
             </div>
           </div>
         </div>
@@ -493,15 +505,15 @@
                 </div>
                 <div class="snacks">
                   <div class="snacks__example-row">
-                    <div role="button" tabindex="0" class="snacks__example-row__item btn btn--radio " id="none">
+                    <div role="button" tabindex="0" class="snacks__example-row__item btn btn--radio">
                       <img class="default-image" alt="an outline of a dog treat" src="./images/no-treats.svg">
                       <img class="selected-image" alt="an outline of a dog treat" src="./images/no-treats-selected.svg">
                     </div>
-                    <div role="button" tabindex="0" class="snacks__example-row__item btn btn--radio snacks__example-row__item--selected btn--radio--selected" id="some">
+                    <div role="button" tabindex="0" class="snacks__example-row__item btn btn--radio snacks__example-row__item--selected btn--radio--selected">
                       <img class="default-image" alt="a few dog treats" src="./images/some-treats.svg">
                       <img class="selected-image" alt="a few dog treats" src="./images/some-treats-selected.svg">
                     </div>
-                    <div role="button" tabindex="0" class="snacks__example-row__item btn btn--radio " id="many">
+                    <div role="button" tabindex="0" class="snacks__example-row__item btn btn--radio">
                       <img class="default-image" alt="a big bunch of dog treats" src="./images/lots-of-treats.svg">
                       <img class="selected-image" alt="a big bunch of dog treats" src="./images/lots-of-treats-selected.svg">
                     </div>
@@ -512,6 +524,7 @@
                   </div>
                 </div>
               </div>
+              <div id="addlast"></div>
             </div>
           </div>
         </div>
@@ -523,32 +536,30 @@
      <div class="wizard-body">
        <div class="content lead-capture-step">
          <progress max="100" value="100"></progress>
-         <header>
-           <div class="paws-container paws-container--left"></div>
-           <div>
-             <h1 style="opacity: 1; transform: translate(0%, 0%);">Pup parent details</h1>
+        <header>
+          <div class="paws-container paws-container--left"></div>
+          <div>
+            <h1 style="opacity: 1; transform: translate(0%, 0%);">Pup parent details</h1>
+          </div>
+          <div class="paws-container paws-container--right"></div>
+        </header>
+        <div class="question-inner-wrapper" id="lead-capture-step">
+          <div class="question-inner" style="transform: translate(0%, 0%); opacity: 1;">
+            <div class="question lead-capture"><div class="lead-capture__name-group">
+              <label for="pet-parent-full-name" id="pet-parent-name-label">Your name</label>
+              <input type="text" placeholder="e.g. Mia McDoglover" id="pet-parent-full-name" aria-labelledby="pet-parent-name-label" aria-invalid="false" name="full_name" required="">
             </div>
-            <div class="paws-container paws-container--right"></div>
-          </header>
-          <div class="question-inner-wrapper" id="lead-capture-step">
-            <div class="question-inner" style="transform: translate(0%, 0%); opacity: 1;">
-              <div class="question lead-capture"><div class="lead-capture__name-group">
-                <label for="pet-parent-full-name" id="pet-parent-name-label">Your name</label>
-                <input type="text" placeholder="e.g. Mia McDoglover" id="pet-parent-full-name" aria-labelledby="pet-parent-name-label" aria-invalid="false" name="full_name" required="">
-              </div>
-              <div class="lead-capture__email-group">
-                <label for="pet-parent-email" id="pet-parent-email-label">Your email</label>
-                <input type="email" name="email" id="pet-parent-email" aria-labelledby="pet-parent-email-label" aria-invalid="false" placeholder="e.g. mia.mcdoglover@gmail.com" required="">
-              </div>
-              <div class="lead-capture__email-group">
-                <label for="pet-parent-email" id="pet-parent-email-label">Your phone number</label>
-                <input type="phone" name="phone" id="pet-parent-phone" aria-labelledby="pet-parent-email-label" aria-invalid="false" placeholder="e.g. (+91) mcdog lover" required="">
-              </div>
+            <div class="lead-capture__email-group">
+              <label for="pet-parent-email" id="pet-parent-email-label">Your email</label>
+              <input type="email" name="email" id="pet-parent-email" aria-labelledby="pet-parent-email-label" aria-invalid="false" placeholder="e.g. mia.mcdoglover@gmail.com" required="">
+            </div>
+            <div class="lead-capture__email-group">
+              <label for="pet-parent-email" id="pet-parent-email-label">Your phone number</label>
+              <input type="phone" name="phone" id="pet-parent-phone" aria-labelledby="pet-parent-email-label" aria-invalid="false" placeholder="e.g. (+91) mcdog lover" required="">
             </div>
           </div>
         </div>
       </div>
-    </div>
   </section>
   
   <section>
@@ -567,7 +578,7 @@
               <span class="calorie-specification__background-paw"></span>
               <span class="calorie-specification__background-paw"></span>
               <p class="calorie-specification__explanation">Based on what you've told us, here is his recommended daily calorie intake from a balanced diet:</p>
-              <span class="calorie-specification__per-dog"><span class="nameofpet"></span> needs<span class="calorie-specification__per-dog__daily-calories"> <span id="calorie"></span> kcal</span>/day</span>
+              <span class="calorie-specification__per-dog" style="background-color: white; color: #1e5d84;"><span class="nameofpet"></span> needs<span class="calorie-specification__per-dog__daily-calories"> <span id="calorie"></span> kcal</span>/day</span>
             </div>
           </div>
         </main>
@@ -595,10 +606,115 @@
   <script src="./main.js"></script>
   <script src="./googlesheet.js"></script>
   <script src="./features.js"></script>
-  <script src="./validate..js"></script>
+  <script src="./validate.js"></script>
+  
+  <script>
+    
+    $('.btn--pill').click(function(){
+      if($(this).hasClass("btn--multi")){
+        if($(this).hasClass("btn--pill--selected btn--multi--selected")){
+          $(this).removeClass("btn--pill--selected btn--multi--selected");
+        }
+        else{
+          $(this).addClass("btn--pill--selected btn--multi--selected");
+        }
+      }
+      else{
+        $(this).siblings().removeClass("btn--pill--selected");
+        $(this).addClass("btn--pill--selected");
+      }
+    })
+    $('.snacks__example-row__item').click(function(){
+      $(this).siblings().removeClass("snacks__example-row__item--selected btn--radio--selected");
+      $(this).addClass("snacks__example-row__item--selected btn--radio--selected");
+      if($(this).is(':first-child')){
+        $(this).parent().siblings().removeClass();
+        $(this).parent().siblings().addClass("snacks__description snacks__description--first");
+
+      }
+      if($(this).is(':nth-child(2)')){
+        $(this).parent().siblings().removeClass();
+        $(this).parent().siblings().addClass("snacks__description snacks__description--second");
+      }
+      if($(this).is(':nth-child(3)')){
+        $(this).parent().siblings().removeClass();
+        $(this).parent().siblings().addClass("snacks__description snacks__description--third");
+      }
+    })
+    
+    $('.body-type__example-row__item').click(function(){
+      $(this).siblings().removeClass("body-type__example-row__item--selected btn--radio--selected");
+      $(this).addClass("body-type__example-row__item--selected btn--radio--selected");
+      if($(this).is(':first-child')){
+        $(this).parent().parent().siblings().removeClass();
+        $(this).parent().parent().siblings().addClass("body-type__description body-type__description--first");
+      }
+      if($(this).is(':nth-child(2)')){
+        $(this).parent().parent().siblings().removeClass();
+        $(this).parent().parent().siblings().addClass("body-type__description body-type__description--second");
+      }
+      if($(this).is(':nth-child(3)')){
+        $(this).parent().parent().siblings().removeClass();
+        $(this).parent().parent().siblings().addClass("body-type__description body-type__description--third");
+        this.parentElement.parentElement.siblings
+      }
+    })
+    $('.body-type__example-row__item').click(function(){
+      $(this).siblings().removeClass("body-type__example-row__item--selected btn--radio--selected");
+      $(this).addClass("body-type__example-row__item--selected btn--radio--selected");
+      if($(this).is(':first-child')){
+        $(this).parent().parent().siblings().removeClass();
+        $(this).parent().parent().siblings().addClass("body-type__description body-type__description--first");
+      }
+      if($(this).is(':nth-child(2)')){
+        $(this).parent().parent().siblings().removeClass();
+        $(this).parent().parent().siblings().addClass("body-type__description body-type__description--second");
+      }
+      if($(this).is(':nth-child(3)')){
+        $(this).parent().parent().siblings().removeClass();
+        $(this).parent().parent().siblings().addClass("body-type__description body-type__description--third");
+      }
+    })
+    $('.activity-level__example-row__item').click(function(){
+      $(this).siblings().removeClass("activity-level__example-row__item--selected btn--radio--selected");
+      $(this).addClass("activity-level__example-row__item--selected btn--radio--selected");
+      if($(this).is(':first-child')){
+        $(this).parent().siblings().removeClass();
+        $(this).parent().siblings().addClass("activity-level__description activity-level__description--second");
+      }
+      if($(this).is(':nth-child(2)')){
+        $(this).parent().siblings().removeClass();
+        $(this).parent().siblings().addClass("activity-level__description activity-level__description--fourth");
+      }
+    })
+  </script>
+  
+  <script>
+    
+  </script>
 
   <script>
+    
     var pageaddress = 0;
+    $('#next').click(function(){
+      pageaddress++;
+      
+      if(pageaddress == 14){
+        var petname = document.getElementById('dog-name-input-0').value;
+        var parentname = document.getElementById('pet-parent-name-label').value;
+        var weight = document.getElementById('weight').value;
+        var calorie = document.getElementById('calorie').innerHTML;
+        var url = encodeURI("Hi Mom and Paw team, Myself "+parentname+" and my pet's name is "+petname+". "+petname+"'s weight is "+weight+". According to your analysis, "+petname+" requires "+calorie+" calories on daily basis and I want to order <recipe name> fresh food for my pet. Please suggest how to go ahead.");
+        var win = window.open('https://api.whatsapp.com/send?phone=+919636277560&text='+url, '_blank');
+        if (win) {
+            //Browser has allowed it to be opened
+            win.focus();
+        } else {
+            //Browser has blocked it
+            alert('Please allow popups for this website.');
+        }
+      }
+    })
     $(document).ready(function(){
         $('#next').attr('disabled',true);
         $('#dog-name-input-0').keyup(function(){
@@ -608,6 +724,7 @@
                 $('#next').attr('disabled',true);
         })
     });
+    
     $(document).ready(function(){
         $('#next').attr('disabled',true);
         $('#dog-name-input-0').keyup(function(){
@@ -634,13 +751,6 @@
             else
                 $('#next').attr('disabled',true);
         })
-    });    
-    $('#next').click(function(){
-      pageaddress++;
-      if(pageaddress == 1 || pageaddress == 2 ||| pageaddress == 7){
-      
-        $('#next').attr('disabled', true); 
-      }
     });
     $('#prev').click(function(){
       pageaddress--;
@@ -648,31 +758,6 @@
       document.getElementById('buttontitle').innerHTML = "Let's Start";
       }
     });
-    var field = 0;
-    $('.moredogs').click(function(){
-      field = field + 1;
-      $('<div class="card question__item"><label for="dog-name-input-0" id="dog-name-label-0">My dog is called</label><input type="text" id="dog-name-input-0" aria-labelledby="dog-name-label-0" placeholder="Your dog&#39;s name"></div>').insertBefore('.add-dog-button');
-    
-      $('<div><div class="sub-question"><div class="question-divider"><span><span class="nameofpet"/> is a good...</span></div><div class="btn--group"><button class="btn btn--pill" role="button" type="radio" id="girlbutton"><span>Girl</span></button><button class="btn btn--pill" role="button" type="radio" id="boybutton"><span>Boy</span></button></div></div><div class="sub-question" id="spayed" style="display:none;"><p>and is <span class="genderofpet"/> spayed?</p><div class="btn--group"><button class="btn btn--pill" role="button" type="button" id="yesbutton"><span>Yes</span></button><button class="btn btn--pill" role="button" type="button" id="nobutton"><span>No</span></button></div></div></div>').insertBefore('.add1');
-      
-      $('<div class="question"> <div class="sub-question"> <div class="question-divider"> <span><span class="nameofpet"></span> is...</span> </div> <div class="age-input-container"> <div class="btn--group"> <button class="btn btn--pill adult" role="button" type="button" id="adultbutton"> <span>An adult</span> </button> <button class="btn btn--pill" role="button" type="button" id="puppybutton"> <span>A puppy</span> </button> </div> <div class="age-inputs"> <input type="number" class="age-input" id="dog-age-months-input-0" aria-labelledby="dog-age-months-label-0" placeholder="0"> <label for="dog-age-months-input-0" id="months">months</label> <input type="number" class="age-input" id="dog-age-weeks-input-0" aria-labelledby="dog-age-weeks-label-0" placeholder="0"> <label for="dog-age-weeks-input-0" id="weeks">weeks</label> </div> </div> <div class="puppy-brought-home-wrapper"> <input type="checkbox" class="puppy-brought-home-input" id="puppy-brought-home-input-0" aria-labelledby="puppy-brought-home-label-0" role="button"> <label for="puppy-brought-home-input-0" class="checkbox-label">I haven&#39;t brought <span class="possesive"></span> home yet. Soon, very soon.</label> </div> </div> </div> </div>').insertBefore('.add2');
-    })
-
-  </script>
-  <!--<script>
-    $('.btn--pill').click(function(){
-      if($(this).hasClass("btn--multi")){alert('hey');
-        if($(this).hasClass("btn--pill--selected btn--multi--selected")){
-          $(this).removeClass("btn--pill--selected btn--multi--selected");
-        }
-        else{
-          $(this).addClass("btn--pill--selected btn--multi--selected");
-        }
-      }
-      else{
-        $(this).siblings().removeClass("btn--pill--selected");
-        $(this).addClass("btn--pill--selected");
-      }
-    })
   </script>-->
+
 </html>

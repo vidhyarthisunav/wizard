@@ -31,7 +31,7 @@
         }
         var boylistpos = document.getElementsByClassName('possesive');
         for (i = 0; i < boylistpos.length; i++) {
-          boylistpos[i].innerHTML = "him";
+          boylistpos[i].innerHTML = "his";
         }
         document.getElementById('spaneu').innerHTML = "neutered";
         $("#spayed").css("display", "block");

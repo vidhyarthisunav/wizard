@@ -1,10 +1,13 @@
 <html>
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Form</title>
     <link rel="stylesheet" href="./lastpage.css">
     <link rel="stylesheet" href="./style.css">
-    
-    
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 </head>
 <body>
         
@@ -64,10 +67,10 @@
                 <span><span class="nameofpet"></span> is a good...</span>
               </div>
               <div class="btn--group">
-                <button class="btn btn--pill" role="button" type="radio" id="girlbutton">
+                <button onclick="setClass(this)" class="btn btn--pill" role="button" type="radio" id="girlbutton">
                   <span>Girl</span>
                 </button>
-                <button class="btn btn--pill" role="button" type="radio" id="boybutton">
+                <button onclick="setClass(this)" class="btn btn--pill" role="button" type="radio" id="boybutton">
                   <span>Boy</span>
                 </button>
               </div>
@@ -75,10 +78,10 @@
             <div class="sub-question" id="spayed" style="display:none;">
               <p>and is <span class="genderofpet"></span> <span id="spaneu">spayed</span>?</p>
                 <div class="btn--group">
-                <button class="btn btn--pill" role="button" type="button" id="yesbutton">
+                <button onclick="setClass(this)" class="btn btn--pill" role="button" type="button" id="yesbutton">
                   <span>Yes</span>
                 </button>
-                <button class="btn btn--pill" role="button" type="button" id="nobutton">
+                <button onclick="setClass(this)" class="btn btn--pill" role="button" type="button" id="nobutton">
                   <span>No</span>
                 </button>
               </div>
@@ -113,18 +116,18 @@
                 </div>
                 <div class="age-input-container">
                   <div class="btn--group">
-                    <button class="btn btn--pill  adult" role="button" type="button" id="adultbutton">
+                    <button onclick="setClass(this)" class="btn btn--pill btn--pill--selected" role="button" type="button" id="adultbutton">
                       <span>An adult</span>
                     </button>
-                    <button class="btn btn--pill" role="button" type="button" id=concat("puppybutton",1)>
+                    <button onclick="setClass(this)" class="btn btn--pill" role="button" type="button" id="puppybutton">
                       <span>A puppy</span>
                     </button>
                     </div>
                     <div class="age-inputs">
                       <input type="number" class="age-input" id="dog-age-months-input-0" aria-labelledby="dog-age-months-label-0" placeholder="0">
-                      <label for="dog-age-months-input-0" id="months">months</label>
+                      <label for="dog-age-months-input-0" id="months">years</label>
                       <input type="number" class="age-input" id="dog-age-weeks-input-0" aria-labelledby="dog-age-weeks-label-0" placeholder="0">
-                      <label for="dog-age-weeks-input-0" id="weeks">weeks</label>
+                      <label for="dog-age-weeks-input-0" id="weeks">months</label>
                     </div>
                   </div>
                   <div class="puppy-brought-home-wrapper">
@@ -154,13 +157,14 @@
           </div>
           <div class="paws-container paws-container--right"></div>
         </header>
+        
         <div class="question-inner-wrapper" id="what-breed-step">
           <div class="question-inner" style="transform: translate(0%, 0%); opacity: 1;">
             <div class="question"><div class="sub-question"><p class="question-divider">
-              <span><span class="nameofpet"></span> is a...</span></p><div role="combobox" aria-owns="typeahead-list-box0" aria-haspopup="listbox" aria-expanded="false" id="breed-typeahead-0" class="typeahead-combobox"><input type="text" class="typeahead-input" aria-label="Search for your dog&#39;s breed" aria-controls="typeahead-listbox" aria-autocomplete="typeahead-list-box0" placeholder="Breed"><div class="typeahead-selector-wrapper"></div></div>
+              <span><span class="nameofpet"></span> is a...</span></p><div role="combobox" aria-owns="typeahead-list-box0" aria-haspopup="listbox" aria-expanded="false" id="breed-typeahead-0" class="typeahead-combobox"><input type="text" id="breed" class="typeahead-input" aria-label="Search for your dog&#39;s breed" aria-controls="typeahead-listbox" aria-autocomplete="typeahead-list-box0" placeholder="Breed"><div class="typeahead-selector-wrapper"></div></div>
               <div class="checkbox-wrapper">
                 
-                <input type="checkbox" class="check" id="unknown-breed-input-0" aria-labelledby="unknown-breed-label-0" role="button">
+                <input type="checkbox" checked id="unknown-breed-input-0" aria-labelledby="unknown-breed-label-0" role="button">
                 <label for="unknown-breed-input-0" class="checkbox-label ">I don't know <span class="possesive"></span> breed</label>
               </div>
             </div>
@@ -194,10 +198,10 @@
                   <span><span class="nameofpet"></span> eats...</span>
                 </div>
                 <div class="btn--group">
-                  <button class="btn btn--pill btn--multi" role="button" type="button"><span>Dry</span></button>
-                  <button class="btn btn--pill btn--multi" role="button" type="button"><span>Wet</span></button>
-                  <button class="btn btn--pill btn--multi" role="button" type="button"><span>Raw</span></button>
-                  <button class="btn btn--pill btn--multi" role="button" type="button"><span>Home-cooked</span></button>
+                  <button onclick="setClass(this)" class="btn btn--pill btn--multi btn--pill--selected btn--multi--selected" role="button" type="button"><span>Dry</span></button>
+                  <button onclick="setClass(this)" class="btn btn--pill btn--multi" role="button" type="button"><span>Wet</span></button>
+                  <button onclick="setClass(this)" class="btn btn--pill btn--multi" role="button" type="button"><span>Raw</span></button>
+                  <button onclick="setClass(this)" class="btn btn--pill btn--multi" role="button" type="button"><span>Home-cooked</span></button>
                 </div>
               </div>
               <div id="foodtype"></div>
@@ -231,16 +235,16 @@
                 <span><span class="nameofpet"></span> is...</span>
               </div>
               <div class="btn--group">
-                <button class="btn btn--pill " role="button" type="button">
+                <button onclick="setClass(this)" class="btn btn--pill " role="button" type="button">
                   <span>Very fussy</span>
                 </button>
-                <button class="btn btn--pill " role="button" type="button">
+                <button onclick="setClass(this)" class="btn btn--pill " role="button" type="button">
                   <span>Fussy</span>
                 </button>
-                <button class="btn btn--pill " role="button" type="button">
+                <button onclick="setClass(this)" class="btn btn--pill btn--pill--selected" role="button" type="button">
                   <span>Not fussy</span>
                 </button>
-                <button class="btn btn--pill " role="button" type="button">
+                <button onclick="setClass(this)" class="btn btn--pill " role="button" type="button">
                   <span>A foodie</span>
                 </button>
               </div>
@@ -412,13 +416,13 @@
                 <span><span class="nameofpet"></span> is allergic to...</span>
               </div>
               <div class="btn--group">
-                <button class="btn btn--pill btn--pill--selected" type="button" id="nothing">
+                <button onclick="setClass(this)" class="btn btn--pill btn--pill--selected" type="button" id="nothing">
                   <span>Nothing</span>
                 </button>
-                <button class="btn btn--pill btn--multi " role="button" type="button" id="chicken">
+                <button onclick="setClass(this)" class="btn btn--pill btn--multi " role="button" type="button" id="chicken">
                   <span>Chicken</span>
                 </button>
-                <button class="btn btn--pill btn--multi " role="button" type="button" id="cheese">
+                <button onclick="setClass(this)" class="btn btn--pill btn--multi " role="button" type="button" id="cheese">
                   <span>Cottage Cheese</span>
                 </button>
               </div>
@@ -460,14 +464,14 @@
                 </div>
                 <div class="health-issues">
                   <div class="btn--group">
-                    <button class="btn btn--pill" role="button" type="button" id="nohealthbutton">
+                    <button onclick="setClass(this)" class="btn btn--pill btn--pill--selected" role="button" type="button" id="nohealthbutton">
                       <span>No health issues</span>
                     </button>
-                    <button class="btn btn--pill " role="button" type="button" id="somehealthbutton">
+                    <button onclick="setClass(this)" class="btn btn--pill " role="button" type="button" id="somehealthbutton">
                       <span>Some health issues</span>
                     </button>
                     <div role="combobox" aria-owns="typeahead-list-box0" aria-haspopup="listbox" aria-expanded="false" class="typeahead-combobox" style="display:none;" id="healthissuesfield">
-                      <input type="text" class="typeahead-input" aria-controls="typeahead-list-box0" aria-autocomplete="typeahead-listbox" aria-label="Search for your dog&#39;s health issues" placeholder="health issues">
+                      <input type="text" class="typeahead-input" aria-controls="typeahead-list-box0" aria-autocomplete="typeahead-listbox" aria-label="Search for your dog&#39;s health issues" size="40"placeholder="health issues">
                     </div>
                   </div>
                 </div>
@@ -547,15 +551,15 @@
           <div class="question-inner" style="transform: translate(0%, 0%); opacity: 1;">
             <div class="question lead-capture"><div class="lead-capture__name-group">
               <label for="pet-parent-full-name" id="pet-parent-name-label">Your name</label>
-              <input type="text" placeholder="e.g. Mia McDoglover" id="pet-parent-full-name" aria-labelledby="pet-parent-name-label" aria-invalid="false" name="full_name" required="">
+              <input type="text" placeholder="e.g. Priya Singh" id="fullname" aria-labelledby="pet-parent-name-label" aria-invalid="false" name="full_name" required="" size="25">
             </div>
             <div class="lead-capture__email-group">
               <label for="pet-parent-email" id="pet-parent-email-label">Your email</label>
-              <input type="email" name="email" id="pet-parent-email" aria-labelledby="pet-parent-email-label" aria-invalid="false" placeholder="e.g. mia.mcdoglover@gmail.com" required="">
+              <input type="email" name="email" id="email" aria-labelledby="pet-parent-email-label" aria-invalid="false" placeholder="e.g. priyasingh@gmail.com" required="">
             </div>
             <div class="lead-capture__email-group">
-              <label for="pet-parent-email" id="pet-parent-email-label">Your phone number</label>
-              <input type="phone" name="phone" id="pet-parent-phone" aria-labelledby="pet-parent-email-label" aria-invalid="false" placeholder="e.g. (+91) mcdog lover" required="">
+              <label for="pet-parent-phone" id="pet-parent-phone-label">Your phone number</label>
+              <input type="text" name="phone" id="phone" aria-labelledby="pet-parent-phone-label" aria-invalid="false" placeholder="e.g. (+91) 12345 6789" required="">
             </div>
           </div>
         </div>
@@ -584,6 +588,9 @@
         </main>
       </div>
     </div>
+    <div id="plan-wrapper" class="plan-wrapper recipes" data="{&quot;csrf_token&quot;:&quot;eIW7mU5O7gudpSKucULj/pRGAJVN8SzH3+SFUYBzc844akSev+UYbD3dR6dlBMsfmP/mI7LmHd/8dadn/IlX5g==&quot;,&quot;token&quot;:&quot;pqRfgyChKDf3Or9hlerCoA&quot;,&quot;guest_id&quot;:2885292,&quot;recipes&quot;:[&quot;beef&quot;,&quot;chicken&quot;,&quot;turkey&quot;,&quot;lamb&quot;],&quot;switched_cadences&quot;:false}">
+      <div id="plan-application"><nav class="my-plan__nav"><div class="my-plan__nav__inner"><a class="my-plan__nav__button btn-updated btn-updated--secondary" href="https://butternutbox.com/my_plan/recipes"><svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(180deg);"><path d="M2.493.907c2.248.982 4.42 2.106 6.423 3.54.659.466 1.434.789 2.184 1.086 1.085.427 1.357 1.254.44 1.977-1.552 1.215-3.219 2.288-4.847 3.4-1.008.684-2.068 1.304-3.102 1.964-.672.426-1.02.232-1.06-.57-.025-.594.117-1.098.698-1.408.815-.44 1.629-.878 2.404-1.383a64.122 64.122 0 002.882-2.028c.4-.298.336-.57-.013-.944-1.641-1.77-3.773-2.83-5.79-4.058-.62-.375-.762-.904-.478-1.576h.259z" fill="#1e5d84"></path></svg><span>Back</span></a><a class="my-plan__nav__button btn-updated btn-updated--blue btn-updated--disabled" href="https://butternutbox.com/my_plan/plan"><span>Choose Plan</span><svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(0deg);"><path d="M2.493.907c2.248.982 4.42 2.106 6.423 3.54.659.466 1.434.789 2.184 1.086 1.085.427 1.357 1.254.44 1.977-1.552 1.215-3.219 2.288-4.847 3.4-1.008.684-2.068 1.304-3.102 1.964-.672.426-1.02.232-1.06-.57-.025-.594.117-1.098.698-1.408.815-.44 1.629-.878 2.404-1.383a64.122 64.122 0 002.882-2.028c.4-.298.336-.57-.013-.944-1.641-1.77-3.773-2.83-5.79-4.058-.62-.375-.762-.904-.478-1.576h.259z" fill="#fff"></path></svg></a></div></nav><main><section class="step-1"><header class="step-header"><div class="step-header__wrapper"><p class="step-header__step">STEP 1/3</p><h1 class="step-header__title"><span>First, choose his recipes</span></h1></div></header><div class="dog-summaries"><div class="dog-summary"><span class="dog-summary__title">hj</span><hr><p class="dog-summary__content">We feed over 10,000 puppies, so hj is in good company.</p></div></div><div class="calorie-specification"><span class="calorie-specification__background-paw"></span><span class="calorie-specification__background-paw"></span><span class="calorie-specification__background-paw"></span><span class="calorie-specification__background-paw"></span><p class="calorie-specification__explanation">Based on what you've told us, here is his recommended daily calorie intake from a balanced diet:</p><span class="calorie-specification__per-dog">hj needs<span class="calorie-specification__per-dog__daily-calories"> 270 kcal</span>/day</span></div><button class="choose-recipes-cta btn-updated btn-updated--blue" type="button">Choose his recipes<img alt="" class="choose-recipes-cta__arrow" src="./Recipes _ Butternut Box_files/white-arrow-48c7350b.svg"><img alt="" class="btn-ornament btn-ornament-1" src="./Recipes _ Butternut Box_files/red-starburst-0b1f3756.svg"><img alt="" class="btn-ornament btn-ornament-2" src="./Recipes _ Butternut Box_files/blue-starburst-37990e8b.svg"><img alt="" class="btn-ornament btn-ornament-3" src="./Recipes _ Butternut Box_files/pink-starburst-6f127a73.svg"><img alt="" class="btn-ornament btn-ornament-4" src="./Recipes _ Butternut Box_files/white-star-131e19f7.svg"><img alt="" class="btn-ornament btn-ornament-5" src="./Recipes _ Butternut Box_files/pink-star-7231cfea.svg"><img alt="" class="btn-ornament btn-ornament-6" src="./Recipes _ Butternut Box_files/blue-flash-7483fa0d.svg"><img alt="" class="btn-ornament btn-ornament-7" src="./Recipes _ Butternut Box_files/blue-flash-7483fa0d.svg"></button><section class="recipe-introduction"><h2 class="recipe-introduction__header">Take your pick</h2><p>We’ll only ever recommend the recipes that are perfect for hj, so we suggest picking those ones.</p><p>We’ll look after putting a plan together based on the meals that you choose.</p><div class="recipe-introduction__benefits-section"><p>All our meals are:</p><div class="recipe-introduction__benefits-wrapper"><div class="recipe-introduction__benefits-item"><img src="./Recipes _ Butternut Box_files/no-nasties-371647ba.svg" alt=""><p>Free from nasties</p></div><div class="recipe-introduction__benefits-item"><img src="./Recipes _ Butternut Box_files/grain-free-18539fdb.svg" alt=""><p>Grain-free</p></div><div class="recipe-introduction__benefits-item"><img src="./Recipes _ Butternut Box_files/gentle-digestion-45aa8058.svg" alt=""><p>Easy to digest</p></div></div></div></section><div class="recipe-cards"><div class="recipe-cards__recommended"><div class="recipe-cards__recommended__prompt"><img class="recipe-cards__recommended__prompt__icon" src="./Recipes _ Butternut Box_files/white-arrow-48c7350b.svg" alt="white arrow pointing to the recommended recipes"></div><h2 class="recipe-cards__recommended__sub-heading">Choose <span>up to 4 recipes</span></h2><div class="recipe-cards__recommended__recipes"><div class="recipe-card__wrapper recipe-card--beef"><div class="recipe-card "><div class="carousel-wrapper"><div class="slick-slider blue-theme slick-initialized" dir="ltr"><button type="button" data-role="none" class="slick-arrow slick-prev" style="display: block;"> Previous</button><div class="slick-list"><div class="slick-track" style="width: 4050px; opacity: 1; transform: translate3d(-450px, 0px, 0px);"><div data-index="-1" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 450px;"></div><div data-index="0" class="slick-slide slick-active slick-current" tabindex="-1" aria-hidden="false" style="outline: none; width: 450px;"><div><picture tabindex="-1" style="width: 100%; display: inline-block;"><source srcset="//d1qzwxap7t1x49.cloudfront.net/packs/133b7de5adb5ddaa3452a0afaf505683.webp" type="image/webp"><img alt="a bowl and a pouch filled with our beef recipe, on top of a wooden table and surrounded by fresh meat and vegetables" src="./Recipes _ Butternut Box_files/beef-1-5af6a690.jpg"></picture></div></div><div data-index="1" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 450px;"><div><picture tabindex="-1" style="width: 100%; display: inline-block;"><source srcset="//d1qzwxap7t1x49.cloudfront.net/packs/548c9b97268ae1e2f6b959accee43fc3.webp" type="image/webp"><img alt="a bowl of our beef recipe, on a marble background, surrounded by fresh meat, sweet potatoes, broccoli, and carrots" src="./Recipes _ Butternut Box_files/beef-2-d40f553f.jpg"></picture></div></div><div data-index="2" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 450px;"></div><div data-index="3" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 450px;"></div><div data-index="4" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 450px;"><div><picture tabindex="-1" style="width: 100%; display: inline-block;"><source srcset="//d1qzwxap7t1x49.cloudfront.net/packs/133b7de5adb5ddaa3452a0afaf505683.webp" type="image/webp"><img alt="a bowl and a pouch filled with our beef recipe, on top of a wooden table and surrounded by fresh meat and vegetables" src="./Recipes _ Butternut Box_files/beef-1-5af6a690.jpg"></picture></div></div><div data-index="5" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 450px;"><div><picture tabindex="-1" style="width: 100%; display: inline-block;"><source srcset="//d1qzwxap7t1x49.cloudfront.net/packs/548c9b97268ae1e2f6b959accee43fc3.webp" type="image/webp"><img alt="a bowl of our beef recipe, on a marble background, surrounded by fresh meat, sweet potatoes, broccoli, and carrots" src="./Recipes _ Butternut Box_files/beef-2-d40f553f.jpg"></picture></div></div><div data-index="6" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 450px;"></div><div data-index="7" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 450px;"></div></div></div><button type="button" data-role="none" class="slick-arrow slick-next" style="display: block;"> Next</button><ul class="slick-dots blue-theme" style="display: block;"><li class="slick-active"><button>1</button></li><li class=""><button>2</button></li><li class=""><button>3</button></li><li class=""><button>4</button></li></ul></div></div><div class="recipe-card__text-container"><div class="recipe-card__modal-clicking-overlay" tabindex="0" role="button"></div><div class="recipe-card__pill-wrapper"></div><h2>Beef It Up</h2><p>A tasty, complete food for dogs and puppies made with 60% freshly prepared beef (trim, heart and liver). No added grains, seasoned with rosemary and using carefully selected human-quality ingredients every time. Made with love in the UK.</p><button type="button" class="recipe-card__more-info-btn"><span>More info</span><svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(0deg);"><path d="M2.493.907c2.248.982 4.42 2.106 6.423 3.54.659.466 1.434.789 2.184 1.086 1.085.427 1.357 1.254.44 1.977-1.552 1.215-3.219 2.288-4.847 3.4-1.008.684-2.068 1.304-3.102 1.964-.672.426-1.02.232-1.06-.57-.025-.594.117-1.098.698-1.408.815-.44 1.629-.878 2.404-1.383a64.122 64.122 0 002.882-2.028c.4-.298.336-.57-.013-.944-1.641-1.77-3.773-2.83-5.79-4.058-.62-.375-.762-.904-.478-1.576h.259z" fill="#1e5d84"></path></svg></button></div><button name="beef" type="button" class="recipe-card__add-btn"><img src="./Recipes _ Butternut Box_files/plus-icon-blue-493f7443.svg" class="recipe-card__plus-icon" alt="a plus icon indicating you can add the recipe"><img src="./Recipes _ Butternut Box_files/white-checkmark-blue-bg-f8953c79.svg" class="recipe-card__checkmark" alt="a check icon indicating you have added the recipe"></button></div><span class="recipe-card__add-speech-bubble"></span></div><div class="recipe-card__wrapper recipe-card--chicken"><div class="recipe-card "><div class="carousel-wrapper"><div class="slick-slider blue-theme slick-initialized" dir="ltr"><button type="button" data-role="none" class="slick-arrow slick-prev" style="display: block;"> Previous</button><div class="slick-list"><div class="slick-track" style="width: 4050px; opacity: 1; transform: translate3d(-450px, 0px, 0px);"><div data-index="-1" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 450px;"></div><div data-index="0" class="slick-slide slick-active slick-current" tabindex="-1" aria-hidden="false" style="outline: none; width: 450px;"><div><picture tabindex="-1" style="width: 100%; display: inline-block;"><source srcset="//d1qzwxap7t1x49.cloudfront.net/packs/fac44bcf78db421442173adff4ccf132.webp" type="image/webp"><img alt="a bowl and a pouch filled with our chicken recipe, on top of a wooden table and surrounded by fresh meat and vegetables" src="./Recipes _ Butternut Box_files/chicken-1-083dfa4e.jpg"></picture></div></div><div data-index="1" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 450px;"></div><div data-index="2" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 450px;"></div><div data-index="3" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 450px;"></div><div data-index="4" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 450px;"><div><picture tabindex="-1" style="width: 100%; display: inline-block;"><source srcset="//d1qzwxap7t1x49.cloudfront.net/packs/fac44bcf78db421442173adff4ccf132.webp" type="image/webp"><img alt="a bowl and a pouch filled with our chicken recipe, on top of a wooden table and surrounded by fresh meat and vegetables" src="./Recipes _ Butternut Box_files/chicken-1-083dfa4e.jpg"></picture></div></div><div data-index="5" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 450px;"></div><div data-index="6" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 450px;"></div><div data-index="7" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 450px;"></div></div></div><button type="button" data-role="none" class="slick-arrow slick-next" style="display: block;"> Next</button><ul class="slick-dots blue-theme" style="display: block;"><li class="slick-active"><button>1</button></li><li class=""><button>2</button></li><li class=""><button>3</button></li><li class=""><button>4</button></li></ul></div></div><div class="recipe-card__text-container"><div class="recipe-card__modal-clicking-overlay" tabindex="0" role="button"></div><div class="recipe-card__pill-wrapper"></div><h2>Chow Down Chicken</h2><p>A tasty, complete food for dogs and puppies made with 60% freshly prepared chicken. No added grains, seasoned with sage and using carefully selected human-quality ingredients every time. Made with love in the UK.</p><button type="button" class="recipe-card__more-info-btn"><span>More info</span><svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(0deg);"><path d="M2.493.907c2.248.982 4.42 2.106 6.423 3.54.659.466 1.434.789 2.184 1.086 1.085.427 1.357 1.254.44 1.977-1.552 1.215-3.219 2.288-4.847 3.4-1.008.684-2.068 1.304-3.102 1.964-.672.426-1.02.232-1.06-.57-.025-.594.117-1.098.698-1.408.815-.44 1.629-.878 2.404-1.383a64.122 64.122 0 002.882-2.028c.4-.298.336-.57-.013-.944-1.641-1.77-3.773-2.83-5.79-4.058-.62-.375-.762-.904-.478-1.576h.259z" fill="#1e5d84"></path></svg></button></div><button name="chicken" type="button" class="recipe-card__add-btn"><img src="./Recipes _ Butternut Box_files/plus-icon-blue-493f7443.svg" class="recipe-card__plus-icon" alt="a plus icon indicating you can add the recipe"><img src="./Recipes _ Butternut Box_files/white-checkmark-blue-bg-f8953c79.svg" class="recipe-card__checkmark" alt="a check icon indicating you have added the recipe"></button></div><span class="recipe-card__add-speech-bubble"></span></div><div class="recipe-card__wrapper recipe-card--turkey"><div class="recipe-card "><div class="carousel-wrapper"><div class="slick-slider blue-theme slick-initialized" dir="ltr"><button type="button" data-role="none" class="slick-arrow slick-prev" style="display: block;"> Previous</button><div class="slick-list"><div class="slick-track" style="width: 4050px; opacity: 1; transform: translate3d(-450px, 0px, 0px);"><div data-index="-1" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 450px;"></div><div data-index="0" class="slick-slide slick-active slick-current" tabindex="-1" aria-hidden="false" style="outline: none; width: 450px;"><div><picture tabindex="-1" style="width: 100%; display: inline-block;"><source srcset="//d1qzwxap7t1x49.cloudfront.net/packs/a179c39ecc9124a2f3d2f0aa1bb48966.webp" type="image/webp"><img alt="a bowl and a pouch filled with our turkey recipe, on top of a wooden table and surrounded by fresh meat and vegetables" src="./Recipes _ Butternut Box_files/turkey-1-594f4d42.jpg"></picture></div></div><div data-index="1" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 450px;"></div><div data-index="2" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 450px;"></div><div data-index="3" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 450px;"></div><div data-index="4" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 450px;"><div><picture tabindex="-1" style="width: 100%; display: inline-block;"><source srcset="//d1qzwxap7t1x49.cloudfront.net/packs/a179c39ecc9124a2f3d2f0aa1bb48966.webp" type="image/webp"><img alt="a bowl and a pouch filled with our turkey recipe, on top of a wooden table and surrounded by fresh meat and vegetables" src="./Recipes _ Butternut Box_files/turkey-1-594f4d42.jpg"></picture></div></div><div data-index="5" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 450px;"></div><div data-index="6" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 450px;"></div><div data-index="7" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 450px;"></div></div></div><button type="button" data-role="none" class="slick-arrow slick-next" style="display: block;"> Next</button><ul class="slick-dots blue-theme" style="display: block;"><li class="slick-active"><button>1</button></li><li class=""><button>2</button></li><li class=""><button>3</button></li><li class=""><button>4</button></li></ul></div></div><div class="recipe-card__text-container"><div class="recipe-card__modal-clicking-overlay" tabindex="0" role="button"></div><div class="recipe-card__pill-wrapper"></div><h2>Gobble Gobble Turkey</h2><p>A tasty, complete food for dogs and puppies made with 60% freshly prepared turkey. No added grains, seasoned with rosemary and using carefully selected human-quality ingredients every time. Made with love in the UK.</p><button type="button" class="recipe-card__more-info-btn"><span>More info</span><svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(0deg);"><path d="M2.493.907c2.248.982 4.42 2.106 6.423 3.54.659.466 1.434.789 2.184 1.086 1.085.427 1.357 1.254.44 1.977-1.552 1.215-3.219 2.288-4.847 3.4-1.008.684-2.068 1.304-3.102 1.964-.672.426-1.02.232-1.06-.57-.025-.594.117-1.098.698-1.408.815-.44 1.629-.878 2.404-1.383a64.122 64.122 0 002.882-2.028c.4-.298.336-.57-.013-.944-1.641-1.77-3.773-2.83-5.79-4.058-.62-.375-.762-.904-.478-1.576h.259z" fill="#1e5d84"></path></svg></button></div><button name="turkey" type="button" class="recipe-card__add-btn"><img src="./Recipes _ Butternut Box_files/plus-icon-blue-493f7443.svg" class="recipe-card__plus-icon" alt="a plus icon indicating you can add the recipe"><img src="./Recipes _ Butternut Box_files/white-checkmark-blue-bg-f8953c79.svg" class="recipe-card__checkmark" alt="a check icon indicating you have added the recipe"></button></div><span class="recipe-card__add-speech-bubble"></span></div><div class="recipe-card__wrapper recipe-card--lamb"><div class="recipe-card "><div class="carousel-wrapper"><div class="slick-slider blue-theme slick-initialized" dir="ltr"><button type="button" data-role="none" class="slick-arrow slick-prev" style="display: block;"> Previous</button><div class="slick-list"><div class="slick-track" style="width: 4050px; opacity: 1; transform: translate3d(-450px, 0px, 0px);"><div data-index="-1" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 450px;"></div><div data-index="0" class="slick-slide slick-active slick-current" tabindex="-1" aria-hidden="false" style="outline: none; width: 450px;"><div><picture tabindex="-1" style="width: 100%; display: inline-block;"><source srcset="//d1qzwxap7t1x49.cloudfront.net/packs/ed1175b01289f51b3df7da6ca92c894f.webp" type="image/webp"><img alt="a bowl and a pouch filled with our lamb recipe, on top of a wooden table and surrounded by fresh meat and vegetables" src="./Recipes _ Butternut Box_files/lamb-1-de2d2d18.jpg"></picture></div></div><div data-index="1" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 450px;"></div><div data-index="2" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 450px;"></div><div data-index="3" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 450px;"></div><div data-index="4" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 450px;"><div><picture tabindex="-1" style="width: 100%; display: inline-block;"><source srcset="//d1qzwxap7t1x49.cloudfront.net/packs/ed1175b01289f51b3df7da6ca92c894f.webp" type="image/webp"><img alt="a bowl and a pouch filled with our lamb recipe, on top of a wooden table and surrounded by fresh meat and vegetables" src="./Recipes _ Butternut Box_files/lamb-1-de2d2d18.jpg"></picture></div></div><div data-index="5" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 450px;"></div><div data-index="6" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 450px;"></div><div data-index="7" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 450px;"></div></div></div><button type="button" data-role="none" class="slick-arrow slick-next" style="display: block;"> Next</button><ul class="slick-dots blue-theme" style="display: block;"><li class="slick-active"><button>1</button></li><li class=""><button>2</button></li><li class=""><button>3</button></li><li class=""><button>4</button></li></ul></div></div><div class="recipe-card__text-container"><div class="recipe-card__modal-clicking-overlay" tabindex="0" role="button"></div><div class="recipe-card__pill-wrapper"></div><h2>Wham Bam Lamb</h2><p>A tasty, complete food for dogs and puppies made with 60% freshly prepared lamb (trim, heart and liver). No added grains, seasoned with turmeric and using carefully selected human-quality ingredients every time. Made with love in the UK.</p><button type="button" class="recipe-card__more-info-btn"><span>More info</span><svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(0deg);"><path d="M2.493.907c2.248.982 4.42 2.106 6.423 3.54.659.466 1.434.789 2.184 1.086 1.085.427 1.357 1.254.44 1.977-1.552 1.215-3.219 2.288-4.847 3.4-1.008.684-2.068 1.304-3.102 1.964-.672.426-1.02.232-1.06-.57-.025-.594.117-1.098.698-1.408.815-.44 1.629-.878 2.404-1.383a64.122 64.122 0 002.882-2.028c.4-.298.336-.57-.013-.944-1.641-1.77-3.773-2.83-5.79-4.058-.62-.375-.762-.904-.478-1.576h.259z" fill="#1e5d84"></path></svg></button></div><button name="lamb" type="button" class="recipe-card__add-btn"><img src="./Recipes _ Butternut Box_files/plus-icon-blue-493f7443.svg" class="recipe-card__plus-icon" alt="a plus icon indicating you can add the recipe"><img src="./Recipes _ Butternut Box_files/white-checkmark-blue-bg-f8953c79.svg" class="recipe-card__checkmark" alt="a check icon indicating you have added the recipe"></button></div><span class="recipe-card__add-speech-bubble"></span></div></div></div><div class="recipe-cards__not-recommended"><div class="recipe-cards__not-recommended__recipes"></div></div></div><section class="faqs"><h2 class="section-header">Frequently Asked Questions</h2><div class="accordion"><div class="accordion__item"><input aria-label="How did you calculate my dog&#39;s plan?" id="calculate-plan" role="button" type="checkbox"><div class="accordion__item__animated-marker"></div><label aria-owns="calculate-plan-content" class="accordion__item__title" for="calculate-plan">How did you calculate my dog's plan?</label><div class="accordion__item__content" id="calculate-plan-content"><p>Dogs are like snowflakes - no two are the same (and that's where the comparison ends really). We use details about your dog, such as their age and their activity levels, in order to work out the perfect portion sizes and recipe mixes for them.</p></div></div><div class="accordion__item"><input aria-label="How many recipes can I choose?" id="how-many-recipes" role="button" type="checkbox"><div class="accordion__item__animated-marker"></div><label aria-owns="how-many-recipes-content" class="accordion__item__title" for="how-many-recipes">How many recipes can I choose?</label><div class="accordion__item__content" id="how-many-recipes-content"><p>You can choose as many of the recommended recipes as you like - the cost of your box won't vary based on the number of meals you choose. In fact, we'd suggest a wide selection to give your pooch plenty of variety.</p></div></div><div class="accordion__item"><input aria-label="Can I change my recipe selection later?" id="change-recipes" role="button" type="checkbox"><div class="accordion__item__animated-marker"></div><label aria-owns="change-recipes-content" class="accordion__item__title" for="change-recipes">Can I change my recipe selection later?</label><div class="accordion__item__content" id="change-recipes-content"><p>Yes - as a Butternut customer you will have your own account. You can log in to your account at any time and adjust your chosen recipes.</p></div></div><div class="accordion__item"><input aria-label="Why is the gram amount different to my current food?" id="why-are-grams-different" role="button" type="checkbox"><div class="accordion__item__animated-marker"></div><label aria-owns="why-are-grams-different-content" class="accordion__item__title" for="why-are-grams-different">Why is the gram amount different to my current food?</label><div class="accordion__item__content" id="why-are-grams-different-content"><p>The calorie density of different foods can vary quite a bit. With this in mind you may find that your dog requires a different volume of our food to their current food in order to provide the correct number of calories for them.</p></div></div><div class="accordion__item"><input aria-label="How much storage will I need?" id="how-much-space" role="button" type="checkbox"><div class="accordion__item__animated-marker"></div><label aria-owns="how-much-space-content" class="accordion__item__title" for="how-much-space">How much storage will I need?</label><div class="accordion__item__content" id="how-much-space-content"><p>You can store meals for up to 7 days in your fridge and the remaining pouches in the freezer to keep them fresh. It depends on your dog's individual calorie intake but it usually takes up the amount of space that a loaf of bread might.</p></div></div></div></section></section></main></div>
+    </div>
   </section>
   
 
@@ -607,38 +614,54 @@
   <script src="./googlesheet.js"></script>
   <script src="./features.js"></script>
   <script src="./validate.js"></script>
+  <script src="./formvalidation.js"></script>
   
   <script>
     
-    $('.btn--pill').click(function(){
-      if($(this).hasClass("btn--multi")){
-        if($(this).hasClass("btn--pill--selected btn--multi--selected")){
-          $(this).removeClass("btn--pill--selected btn--multi--selected");
+    function setClass(item){
+        if($(item).hasClass("btn--multi")){
+          if($(item).hasClass("btn--pill--selected btn--multi--selected")){
+            $(item).removeClass("btn--pill--selected btn--multi--selected");
+            
+            
+            }
+            
+          
+          else{
+            $(item).addClass("btn--pill--selected btn--multi--selected");
+            $(item).siblings("first").removeClass("btn--pill--selected");
+              if($(item).siblings(":first").hasClass("btn--pill") && !$(item).siblings(":first").hasClass("btn--multi")){
+                $(item).siblings(":first").removeClass("btn--pill--selected");
+              }
+          }
         }
         else{
-          $(this).addClass("btn--pill--selected btn--multi--selected");
+          $(item).siblings(".btn--pill").removeClass("btn--pill--selected btn--multi--selected");
+          $(item).siblings().removeClass("btn--pill--selected");
+          $(item).addClass("btn--pill--selected");
         }
       }
-      else{
-        $(this).siblings().removeClass("btn--pill--selected");
-        $(this).addClass("btn--pill--selected");
-      }
-    })
     $('.snacks__example-row__item').click(function(){
       $(this).siblings().removeClass("snacks__example-row__item--selected btn--radio--selected");
       $(this).addClass("snacks__example-row__item--selected btn--radio--selected");
       if($(this).is(':first-child')){
         $(this).parent().siblings().removeClass();
         $(this).parent().siblings().addClass("snacks__description snacks__description--first");
+        $(this).parent().siblings().children(":first").text("Doesn't eat any");
+        $(this).parent().siblings().children(':nth-child(2)').text('');
 
       }
       if($(this).is(':nth-child(2)')){
         $(this).parent().siblings().removeClass();
         $(this).parent().siblings().addClass("snacks__description snacks__description--second");
+        $(this).parent().siblings().children(":first").text('Has some');
+        $(this).parent().siblings().children(':nth-child(2)').text('1-3 times a day');
       }
       if($(this).is(':nth-child(3)')){
         $(this).parent().siblings().removeClass();
         $(this).parent().siblings().addClass("snacks__description snacks__description--third");
+        $(this).parent().siblings().children(":first").text('Has lots');
+        $(this).parent().siblings().children(':nth-child(2)').text('4+ times a day');
       }
     })
     
@@ -648,31 +671,20 @@
       if($(this).is(':first-child')){
         $(this).parent().parent().siblings().removeClass();
         $(this).parent().parent().siblings().addClass("body-type__description body-type__description--first");
+        $(this).parent().parent().siblings().children(":first").text('A little skinny');
+        $(this).parent().parent().siblings().children(':nth-child(2)').text('Narrow waistline and you can clearly see his ribs.');
       }
       if($(this).is(':nth-child(2)')){
         $(this).parent().parent().siblings().removeClass();
         $(this).parent().parent().siblings().addClass("body-type__description body-type__description--second");
+        $(this).parent().parent().siblings().children(":first").text('Just right');
+        $(this).parent().parent().siblings().children(':nth-child(2)').text('Visible waistline with some fat cover but his ribs are easy to feel.');
       }
       if($(this).is(':nth-child(3)')){
         $(this).parent().parent().siblings().removeClass();
         $(this).parent().parent().siblings().addClass("body-type__description body-type__description--third");
-        this.parentElement.parentElement.siblings
-      }
-    })
-    $('.body-type__example-row__item').click(function(){
-      $(this).siblings().removeClass("body-type__example-row__item--selected btn--radio--selected");
-      $(this).addClass("body-type__example-row__item--selected btn--radio--selected");
-      if($(this).is(':first-child')){
-        $(this).parent().parent().siblings().removeClass();
-        $(this).parent().parent().siblings().addClass("body-type__description body-type__description--first");
-      }
-      if($(this).is(':nth-child(2)')){
-        $(this).parent().parent().siblings().removeClass();
-        $(this).parent().parent().siblings().addClass("body-type__description body-type__description--second");
-      }
-      if($(this).is(':nth-child(3)')){
-        $(this).parent().parent().siblings().removeClass();
-        $(this).parent().parent().siblings().addClass("body-type__description body-type__description--third");
+        $(this).parent().parent().siblings().children(":first").text('A bit chubby');
+        $(this).parent().parent().siblings().children(':nth-child(2)').text('Waistline is not visible and his ribs are tricky to feel.');
       }
     })
     $('.activity-level__example-row__item').click(function(){
@@ -681,84 +693,51 @@
       if($(this).is(':first-child')){
         $(this).parent().siblings().removeClass();
         $(this).parent().siblings().addClass("activity-level__description activity-level__description--second");
+        $(this).parent().siblings().children(":first").text('Somewhat active');
+        $(this).parent().siblings().children(':nth-child(2)').text('0.5 - 1hr walks per day');
       }
       if($(this).is(':nth-child(2)')){
         $(this).parent().siblings().removeClass();
         $(this).parent().siblings().addClass("activity-level__description activity-level__description--fourth");
+        $(this).parent().siblings().children(":first").text('Very active');
+        $(this).parent().siblings().children(':nth-child(2)').text('2-3hr walks per day');
       }
     })
   </script>
-  
   <script>
-    
-  </script>
-
-  <script>
-    
-    var pageaddress = 0;
-    $('#next').click(function(){
+    $(function() {
+      var availableTags = [
+        "ActionScript",
+        "AppleScript",
+        "Asp",
+        "BASIC",
+        "C",
+        "C++",
+        "Clojure",
+        "COBOL",
+        "ColdFusion",
+        "Erlang",
+        "Fortran",
+        "Groovy",
+        "Haskell",
+        "Java",
+        "JavaScript",
+        "Lisp",
+        "Perl",
+        "PHP",
+        "Python",
+        "Ruby",
+        "Scala",
+        "Scheme"
+      ];
+      $( "#breed" ).autocomplete({
+        source: availableTags
+      })
+      .autocomplete("search", "JavaScript");
+      $("ul.ui-autocomplete")
+      .find("li:contains(JavaScript)")
+      .trigger("click")
+    });
       
-      
-      if(pageaddress == 13){
-        var petname = document.getElementById('dog-name-input-0').value;
-        var parentname = document.getElementById('pet-parent-full-name').value;
-        var weight = document.getElementById('weight').value;
-        var calorie = document.getElementById('calorie').innerHTML;
-        var url = encodeURI("Hi Mom and Paw team, Myself "+parentname+" and my pet's name is "+petname+". "+petname+"'s weight is "+weight+". According to your analysis, "+petname+" requires "+calorie+" calories on daily basis and I want to order <recipe name> fresh food for my pet. Please suggest how to go ahead.");
-        var win = window.open('https://api.whatsapp.com/send?phone=+919636277560&text='+url, '_blank');
-        if (win) {
-            //Browser has allowed it to be opened
-            win.focus();
-        } else {
-            //Browser has blocked it
-            alert('Please allow popups for this website.');
-        }
-      }
-      pageaddress++;
-    })
-    $(document).ready(function(){
-        $('#next').attr('disabled',true);
-        $('#dog-name-input-0').keyup(function(){
-            if($(this).val().length !=0)
-                $('#next').attr('disabled', false);            
-            else
-                $('#next').attr('disabled',true);
-        })
-    });
-    
-    $(document).ready(function(){
-        $('#next').attr('disabled',true);
-        $('#dog-name-input-0').keyup(function(){
-            if($(this).val().length !=0)
-                $('#next').attr('disabled', false);            
-            else
-                $('#next').attr('disabled',true);
-        })
-    });
-    $(document).ready(function(){
-        $('#next').attr('disabled',true);
-        $('#weight').keyup(function(){
-            if($(this).val().length !=0)
-                $('#next').attr('disabled', false);            
-            else
-                $('#next').attr('disabled',true);
-        })
-    });
-    $(document).ready(function(){
-        $('#next').attr('disabled',true);
-        $('#pet-parent-email-label').keyup(function(){
-            if($(this).val().length !=0)
-                $('#next').attr('disabled', false);            
-            else
-                $('#next').attr('disabled',true);
-        })
-    });
-    $('#prev').click(function(){
-      pageaddress--;
-      if(pageaddress == 0){
-      document.getElementById('buttontitle').innerHTML = "Let's Start";
-      }
-    });
-  </script>
-
+    </script>
 </html>

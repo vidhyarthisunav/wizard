@@ -1,4 +1,4 @@
-var gender;
+var gender = "male";
 
     $('#boybutton').click(function(){
         gender = "male";

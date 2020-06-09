@@ -1,11 +1,17 @@
 <html>
 <head>
- <!--<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">--> 
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
     <title>Form</title>
-    <link rel="stylesheet" href="./lastpage.css">
+    <link rel="stylesheet" media="all" href="./recipes.css">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  
+    
+  
   <script src="//code.jquery.com/jquery-1.10.2.js"></script>
   <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 </head>
@@ -33,11 +39,11 @@
               <label for="dog-name-input-0" id="dog-name-label-0">My dog is called</label>
               <input type="text" id="dog-name-input-0" aria-labelledby="dog-name-label-0" placeholder="Your dog&#39;s name">
             </div>
-            <div class="add-dog-button">
+           <!-- <div class="add-dog-button">
               <button id="moredogs" type="button" class="btn-updated btn--text" title="">
                 <span >I have another dog</span>
               </button>
-            </div>
+            </div>-->
           </div>
         </div>
       </div>
@@ -537,9 +543,9 @@
   </section>
 
   <section>
-     <div class="wizard-body">
-       <div class="content lead-capture-step">
-         <progress max="100" value="100"></progress>
+    <div class="wizard-body">
+      <div class="content lead-capture-step">
+        <progress max="100" value="100"></progress>
         <header>
           <div class="paws-container paws-container--left"></div>
           <div>
@@ -564,31 +570,148 @@
           </div>
         </div>
       </div>
+    </div>
   </section>
-  
+
   <section>
     <div class="main-content scrollable-body-panel">
       <div id="plan-wrapper" class="plan-wrapper recipes">
-        <main>
-          <div id="plan-application">
-            <header class="step-header">
-              <div class="step-header__wrapper">
-                <p class="step-header__step"></p>
+        <div id="plan-application">
+          <main>
+            <div class="step-1">
+              <header class="step-header">
+                <div class="step-header__wrapper">
+                  <h1 class="step-header__title">
+                    <span style="color: #1e5d84;">Choose his recipes</span>
+                  </h1>
+                </div>
+              </header>
+              <div class="dog-summaries">
+                <div class="dog-summary">
+                  <span class="dog-summary__title" style="color: white;"><span class="nameofpet"></span> </span>
+                  <hr>
+                  <p class="dog-summary__content" style="color: white;">We feed lots of loving dogs just like <span class="nameofpet"></span> , so he is in good hands.</p>
+                </div>
               </div>
-            </header>
-            <div class="calorie-specification">
-              <span class="calorie-specification__background-paw"></span>
-              <span class="calorie-specification__background-paw"></span>
-              <span class="calorie-specification__background-paw"></span>
-              <span class="calorie-specification__background-paw"></span>
-              <p class="calorie-specification__explanation">Based on what you've told us, here is his recommended daily calorie intake from a balanced diet:</p>
-              <span class="calorie-specification__per-dog" style="background-color: white; color: #1e5d84;"><span class="nameofpet"></span> needs<span class="calorie-specification__per-dog__daily-calories"> <span id="calorie"></span> kcal</span>/day</span>
+              <div class="calorie-specification">
+                <p class="calorie-specification__explanation">Based on what you've told us, here is his recommended daily calorie intake from a balanced diet:</p>
+                <span class="calorie-specification__per-dog" style="color: #1e5d84; background-color: white;"><span class="nameofpet"></span> needs <span class="calorie-specification__per-dog__daily-calories" id="calorie"></span> kcal/day</span>
+              </div>
+              <!--<button class="choose-recipes-cta btn-updated btn-updated--blue" type="button">Choose his recipes<img alt="" class="choose-recipes-cta__arrow" src="./content/white-arrow-48c7350b.svg"><img alt="" class="btn-ornament btn-ornament-1" src="./content/red-starburst-0b1f3756.svg"><img alt="" class="btn-ornament btn-ornament-2" src="./content/blue-starburst-37990e8b.svg"><img alt="" class="btn-ornament btn-ornament-3" src="./content/pink-starburst-6f127a73.svg"><img alt="" class="btn-ornament btn-ornament-4" src="./content/white-star-131e19f7.svg"><img alt="" class="btn-ornament btn-ornament-5" src="./content/pink-star-7231cfea.svg"><img alt="" class="btn-ornament btn-ornament-6" src="./content/blue-flash-7483fa0d.svg"><img alt="" class="btn-ornament btn-ornament-7" src="./content/blue-flash-7483fa0d.svg"></button>-->
             </div>
-          </div>
-        </main>
+              <div class="recipe-introduction">
+                <h2 class="recipe-introduction__header">Take your pick</h2>
+                <p>We’ll only ever recommend the recipes that are perfect for <span class="nameofpet"></span> , so we suggest picking those ones.</p>
+                <p>We’ll look after putting a plan together based on the meals that you choose.</p>
+                <div class="recipe-introduction__benefits-section">
+                  <p>All our meals are:</p>
+                  <div class="recipe-introduction__benefits-wrapper">
+                    <div class="recipe-introduction__benefits-item">
+                      <img src="./content/no-nasties-371647ba.svg" alt="">
+                      <p>Free from nasties</p>
+                    </div>
+                    <div class="recipe-introduction__benefits-item">
+                      <img src="./content/grain-free-18539fdb.svg" alt="">
+                      <p>Grain-free</p>
+                    </div>
+                    <div class="recipe-introduction__benefits-item">
+                      <img src="./content/gentle-digestion-45aa8058.svg" alt="">
+                      <p>Easy to digest</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="recipe-cards">
+                <div class="recipe-cards__recommended">
+                  <div class="recipe-cards__recommended__prompt">
+                    <img class="recipe-cards__recommended__prompt__icon" src="./content/white-arrow-48c7350b.svg" alt="white arrow pointing to the recommended recipes">
+                  </div>
+                  <h2 class="recipe-cards__recommended__sub-heading" style="color: white;">Choose <span>up to 2 recipes</span></h2>
+                  <div class="recipe-cards__recommended__recipes">
+                   <div class="recipe-card__wrapper recipe-card--beef">
+                     <div class="recipe-card">
+                       <div class="carousel-wrapper">
+                         <div class="slick-slider blue-theme slick-initialized" dir="ltr">
+                           <div class="slick-list">
+                             <div class="slick-track" style="width: 4050px; opacity: 1; transform: translate3d(-450px, 0px, 0px);">
+                              <div data-index="-1" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 450px;"></div>
+                              <div data-index="0" class="slick-slide slick-active slick-current" tabindex="-1" aria-hidden="false" style="outline: none; width: 450px;">
+                                <div>
+                                  <picture tabindex="-1" style="width: 100%; display: inline-block;"><source srcset="//d1qzwxap7t1x49.cloudfront.net/packs/133b7de5adb5ddaa3452a0afaf505683.webp" type="image/webp"><img alt="a bowl and a pouch filled with our beef recipe, on top of a wooden table and surrounded by fresh meat and vegetables" src="./images/vegbowl.jpg"></picture>
+                                </div>
+                              </div>
+                              <div data-index="1" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 450px;"></div>
+                              <div data-index="2" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 450px;"></div>
+                              <div data-index="3" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 450px;"></div>
+                              <div data-index="4" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 450px;">
+                              <div>
+                                <picture tabindex="-1" style="width: 100%; display: inline-block;"><source srcset="//d1qzwxap7t1x49.cloudfront.net/packs/133b7de5adb5ddaa3452a0afaf505683.webp" type="image/webp"><img alt="a bowl and a pouch filled with our beef recipe, on top of a wooden table and surrounded by fresh meat and vegetables" src="./images/vegbowl.jpg"></picture>
+                              </div>
+                            </div>
+                            <div data-index="5" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 450px;"></div>
+                            <div data-index="6" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 450px;"></div>
+                            <div data-index="7" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 450px;"></div>
+                              </div>
+                            </div>
+                            </div>
+                          </div>
+                          <div class="recipe-card__text-container">
+                            <div class="recipe-card__modal-clicking-overlay" tabindex="0" role="button"></div>
+                            <div class="recipe-card__pill-wrapper"></div>
+                            <h2>Very Veggie</h2>
+                            <p>Very Veggie is a vegetarian recipe that promotes muscle growth, provides energy, and a welcome change for your pet.</p>
+                          </div>
+                          <button name="veggie" onclick="change_veggie(this)" type="button" class="recipe-card__add-btn"><img src="./content/plus-icon-blue-493f7443.svg" class="recipe-card__plus-icon" alt="a plus icon indicating you can add the recipe"><img src="./content/white-checkmark-blue-bg-f8953c79.svg" class="recipe-card__checkmark" alt="a check icon indicating you have added the recipe"></button>
+                        </div>
+                        <span class="recipe-card__add-speech-bubble"></span>
+                      </div>
+                   <div class="recipe-card__wrapper recipe-card--turkey">
+                     <div class="recipe-card ">
+                       <div class="carousel-wrapper">
+                         <div class="slick-slider blue-theme slick-initialized" dir="ltr">
+                           <div class="slick-list">
+                             <div class="slick-track" style="width: 4050px; opacity: 1; transform: translate3d(-1800px, 0px, 0px);">
+                              <div data-index="-1" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 450px;"></div>
+                                <div data-index="0" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 450px;"></div>
+                                  <div data-index="1" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 450px;"></div>
+                                  <div data-index="2" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline: none; width: 450px;"></div>
+                                  <div data-index="3" class="slick-slide slick-active slick-current" tabindex="-1" aria-hidden="false" style="outline: none; width: 450px;">
+                                    <div>
+                                      <picture tabindex="-1" style="width: 100%; display: inline-block;"><source srcset="//d1qzwxap7t1x49.cloudfront.net/packs/media/chicken/chicken-2-54990fd8.jpg" type="image/webp"><img alt="two dogs licking their snouts and looking at two pouches of Butternut chicken" src="./content/turkey-meal-and-dogs-594e3d68.jpg"></picture>
+                                    </div>
+                                  </div>
+                                  <div data-index="4" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 450px;"></div>
+                                  <div data-index="5" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 450px;"></div>
+                                  <div data-index="6" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 450px;"></div>
+                                  <div data-index="7" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width: 450px;"><div>
+                                    <picture tabindex="-1" style="width: 100%; display: inline-block;"><source srcset="//d1qzwxap7t1x49.cloudfront.net/packs/media/chicken/chicken-2-54990fd8.jpg" type="image/webp"><img alt="two dogs licking their snouts and looking at two pouches of Butternut chicken" src="./content/turkey-meal-and-dogs-594e3d68.jpg"></picture>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="recipe-card__text-container">
+                          <div class="recipe-card__modal-clicking-overlay" tabindex="0" role="button"></div>
+                          <div class="recipe-card__pill-wrapper"></div>
+                          <h2>Chompin' Chicken</h2>
+                          <p>Easy to digest, Chompin' Chicken is a great home-cooked meal for your pet as it promotes muscle growth, is ideal for bone health and overall energy levels.</p>
+                        </div>
+                        <button name="chicken" onclick="change_chicken(this)"type="button" class="recipe-card__add-btn"><img src="./content/plus-icon-blue-493f7443.svg" class="recipe-card__plus-icon" alt="a plus icon indicating you can add the recipe"><img src="./content/white-checkmark-blue-bg-f8953c79.svg" class="recipe-card__checkmark" alt="a check icon indicating you have added the recipe"></button>
+                      </div>
+                      <span class="recipe-card__add-speech-bubble"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          </main>
+        </div>
       </div>
     </div>
   </section>
+  
+  
   
 
 <div class="question-navigation-buttons">
@@ -615,17 +738,46 @@
   <!--<script src="./validate.js"></script>-->
   <script>
     var pageaddress = 0;
-    
+    var chicken = false;
+    var veggie = false;
+    function change_chicken(item){
+      if(item.parentElement.classList.contains('recipe-card--added')){
+        item.parentElement.classList.remove('recipe-card--added');
+      }else{
+        item.parentElement.classList.add('recipe-card--added');
+      }
+      chicken = !chicken;
+    }
+    function change_veggie(item){
+      if(item.parentElement.classList.contains('recipe-card--added')){
+        item.parentElement.classList.remove('recipe-card--added');
+      }else{
+        item.parentElement.classList.add('recipe-card--added');
+      }
+      veggie = !veggie;
+    }
     $('#next').click(function(){
       if(pageaddress == 6 || pageaddress == 11 || pageaddress == 0){
         $('#next').attr('disabled',true);
       }
-      if(pageaddress == 13){
+      if(pageaddress >= 13){
+        
         var petname = document.getElementById('dog-name-input-0').value;
         var parentname = document.getElementById('fullname').value;
         var weight = document.getElementById('weight').value;
-        var calorie = document.getElementById('calorie').innerHTML;
-        var url = encodeURI("Hi Mom and Paw team, Myself "+parentname+" and my pet's name is "+petname+". "+petname+"'s weight is "+weight+". According to your analysis, "+petname+" requires "+calorie+" calories on daily basis and I want to order <recipe name> fresh food for my pet. Please suggest how to go ahead.");
+        var calorie = document.getElementById('calorie').value;
+        var recipe;
+        if(chicken && veggie){
+          recipe = "Very Veggie and Chicken Chow Down recipes";
+        }
+        else if(chicken){
+          recipe = "Chicken Chow Down recipe";
+        }
+        else{
+          recipe = "Very Veggie recipe";
+        }
+        var url = encodeURI("Hi Mom and Paw team, my name is "+parentname+" and my pet's name is "+petname+". "+petname+"'s weight is "+weight+". According to your analysis, "+petname+" requires "+calorie+" calories on daily basis and I want to order your "+recipe+" for my pet. Please suggest how to go ahead.");
+        
         var win = window.open('https://api.whatsapp.com/send?phone=+919636277560&text='+url, '_blank');
         if (win) {
             //Browser has allowed it to be opened
